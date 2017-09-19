@@ -1,3 +1,3 @@
 Wedding site for Siranjeevi and Abinaya
 
-Hosted at: http://siranjeeviwedsabi.appspot.com/
+Hosted at: http://siranwedsabi.appspot.com/
