@@ -1,4 +1,4 @@
-body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: black; }
+body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: black;}
 .bg { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
 .bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
 .bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
@@ -14,12 +14,29 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .topnaviicon {position: absolute; top: 0px; left: 0px; width: 99%; padding:0px; margin: 0px; border: 0px; }
 .hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120);}
 @keyframes brideintro { from {left: -50%;} to {left: 12%;} }
-.bride{position: fixed; left: 12%; top: 15%; width: 37.8%; height: 39%;  border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right; animation-name: brideintro; animation-duration: 2s; }
-@keyframes groomintro { from {right: -50%;} to {right: 12%;} }
-.groom{position: fixed; right: 12%; top: 15%; width: 37.8%; height: 39%; border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;  animation-name: groomintro; animation-duration: 2s;}
-@keyframes inviintro { from {top: 120%;} to {top: 57%;} }
-.homeinvi{position: fixed; left: 9%; top: 57%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;  animation-name: inviintro; animation-duration: 2s;}
+.brideintro {animation-name: brideintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes brideexit { from {left: 12%;} to {left: -50%;} }
+.brideexit {animation-name: brideexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.bride{position: fixed; left: -50%; top: 15%; width: 37.8%; height: 39%;  border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
+@keyframes groomintro { from {right: -51%;} to {right: 12%;} }
+.groomintro {animation-name: groomintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes groomexit { from {right: 12%;} to {right: -50%;} }
+.groomexit {animation-name: groomexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.groom{position: fixed; right: -50%; top: 15%; width: 37.8%; height: 39%; border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
 .bridedata { width: 96%; height: 96%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 2%; }
 .groomdata { width: 96%; height: 96%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 2%; }
 .brideimg {position: absolute; width: 33%; height: auto; left: 0px; bottom: 0px; }
 .groomimg {position: absolute; width: 33%; height: auto; right: 0px; bottom: 0px; }
+@keyframes inviintro { from {top: 180%;} to {top: 57%;} }
+.inviintro { animation-name: inviintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes inviexit { from {top: 57%;} to {top: 180%;} }
+.inviexit { animation-name: inviexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+.btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+.btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
+@keyframes plhintro { from {top: 120%;} to {top: 57%;} }
+.plhintro { animation-name: plhintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes plhexit { from {top: 57%;} to {top: 120%;} }
+.plhexit { animation-name: plhexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.placeholder{position: fixed; left: 9%; top: 120%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+

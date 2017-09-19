@@ -7,18 +7,20 @@
 <script src="static/scripts/jquery-3.2.1.min.js"></script>
 <script src="static/scripts/scripts.js"></script>
 </head>
-<body>
+<body onload="navTo(0, 0)">
 <div class="bg bg1"></div>
 <div class="bg bg2"></div>
 <div class="cmnhf header"> </div>
-<div class="topnavibtn"> <img class="topnaviicon" src="static/imgs/home.png" /> </div>
-<div class="topnavibtn topnavibtnl1"> <img class="topnaviicon" src="static/imgs/invi.png" /> </div>
-<div class="topnavibtn topnavibtnr1"> <img class="topnaviicon" src="static/imgs/albums.png" /> </div>
-<div class="topnavibtn topnavibtnl2"> <img class="topnaviicon" src="static/imgs/guestbook.png" /> </div>
-<div class="topnavibtn topnavibtnr2"> <img class="topnaviicon" src="static/imgs/info.png" /> </div>
-<div class="hdiv groom"> <div class="groomdata"> <br /><br /><br /> Groom: Mr. Siranjeevi </div><img class="groomimg" src="static/imgs/siran.png" /></div>
-<div class="hdiv homeinvi"> <br /><br /> Siranjeevi weds Abinaya <br /><br /> Invitation </div>
-<div class="hdiv bride"> <div class="bridedata"> <br /><br /><br /> Bride: Ms. Abinaya </div><img class="brideimg" src="static/imgs/abi.png" /></div>
+<div class="topnavibtn" onclick="navTo(0, 0)"> <img class="topnaviicon" src="static/imgs/home.png" /> </div>
+<div class="topnavibtn topnavibtnl1" onclick="navTo(0, 1)"> <img class="topnaviicon" src="static/imgs/invi.png" /> </div>
+<div class="topnavibtn topnavibtnr1" onclick="navTo(0, 2)"> <img class="topnaviicon" src="static/imgs/albums.png" /> </div>
+<div class="topnavibtn topnavibtnl2" onclick="navTo(0, 3)"> <img class="topnaviicon" src="static/imgs/guestbook.png" /> </div>
+<div class="topnavibtn topnavibtnr2" onclick="navTo(0, 4)"> <img class="topnaviicon" src="static/imgs/info.png" /> </div>
+<div id="groom" class="hdiv groom"> <div class="groomdata"> <br /><br /><br /> Groom: Mr. Siranjeevi </div><img class="groomimg" src="static/imgs/siran.png" /></div>
+<div id="homeinvite" class="hdiv homeinvi"> <br /><br /> Siranjeevi weds Abinaya <br /><br /> Invitation <img class="btl" src="static/imgs/bt.png" /> <img class="btr" src="static/imgs/bt.png" /> </div>
+<div id="bride" class="hdiv bride"> <div class="bridedata"> <br /><br /><br /> Bride: Ms. Abinaya </div><img class="brideimg" src="static/imgs/abi.png" /></div>
+<div id="placeholder" class="hdiv placeholder">
 <div class="cmnhf fotter"> </div>
 </body>
 </html>
+
