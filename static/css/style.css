@@ -34,9 +34,13 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
-@keyframes plhintro { from {top: 120%;} to {top: 57%;} }
+@keyframes plhintro { from {top: 120%;} to {top: 39%;} }
 .plhintro { animation-name: plhintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes plhexit { from {top: 57%;} to {top: 120%;} }
+@keyframes plhexit { from {top: 39%;} to {top: 120%;} }
 .plhexit { animation-name: plhexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.placeholder{position: fixed; left: 9%; top: 120%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
-
+.placeholder{position: fixed; left: 9%; top: 120%; width: 81%; height: 63%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+@keyframes ngintro { from {left: 120%;} to {left: 9%;} }
+.ngintro { animation-name: ngintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes ngexit { from {left: 9%;} to {left: 120%;} }
+.ngexit { animation-name: ngexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.nanogallery{position: fixed; left: 120%; top: 36%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
