@@ -13,13 +13,18 @@ function navTo(entry, pgid) {
           $("#homeinvite").addClass('inviexit');
           break;
           
+        case 2:
+          $("#nanogallery2").removeClass('ngintro');
+          $("#nanogallery2").addClass('ngexit');
+          break;
+          
         default:
           $("#placeholder").removeClass('plhintro');
           $("#placeholder").addClass('plhexit');
           break;
       }
       
-      setTimeout(function () { navTo(1, pgid); }, 1800);
+      setTimeout(function () { navTo(1, pgid); }, 900);
     } else {
       setTimeout(function () { navTo(1, pgid); }, 10);
     }
@@ -34,6 +39,11 @@ function navTo(entry, pgid) {
         $("#homeinvite").addClass('inviintro');
         break;
         
+      case 2:
+        $("#nanogallery2").removeClass('ngexit');
+        $("#nanogallery2").addClass('ngintro');
+        break;
+        
       default:
         $("#placeholder").removeClass('plhexit');
         $("#placeholder").addClass('plhintro');
@@ -43,4 +53,3 @@ function navTo(entry, pgid) {
     currpgid = pgid;
   }
 }
-
