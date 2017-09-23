@@ -23,8 +23,17 @@
 <div id="bride" class="hdiv bride"> <div class="bridedata"> <br /><br /><br /> Bride: Ms. Abinaya </div><img class="brideimg" src="static/imgs/abi.png" /></div>
 <div id="guestbook" class="hdiv guestbook"> </div>
 <div id="guestbookform" class="hdiv guestbookform"> </div>
-<div id="infor" class="hdiv infor"> </div>
-<div id="infol" class="hdiv infol"> </div>
+<div id="infor" class="hdiv infor"> <br /> 
+<span id="gmbtn0" class="gmbtn" onclick="loadgmap(0)"> Venue </span>
+<span id="gmbtn1" class="gmbtn" onclick="loadgmap(1)"> From New Bus Stand </span>
+<span id="gmbtn2" class="gmbtn" onclick="loadgmap(2)"> From Old Bus Stand </span>
+ <br /> <br />
+<iframe
+  id="gmap" class="gmap"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg
+    &q=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India" allowfullscreen>
+</iframe> </div>
+<div id="infol" class="hdiv infol"> <br /><br /> Marriage Details <br /> <br /> Friday, October 27, 2017 <br /> <br /> Between 08:00 to 10:00 AM <br /> <br /> At VMS Kalyaana Mandapam, Tirunelveli <br /> </div>
 <div id="nanogallery2" class="nanogallery" data-nanogallery2='{
           "thumbnailHeight":  90,
           "thumbnailWidth":   90,
@@ -67,7 +76,8 @@
           "itemsBaseURL":     "http://siranwedsabi.appspot.com/static/imgs/albums/"
         }' >    
 
-     <a href="006.jpg" data-ngid="1" data-ngThumb="006.jpg"> Invitation </a>
+     <a href="finvif.jpg" data-ngid="1" data-ngThumb="finvif.jpg"> Friends Invite - Front </a>
+     <a href="finvib.jpg" data-ngid="2" data-ngThumb="finvib.jpg"> Friends Invite - Back </a>
     
   </div> 
 <div class="cmnhf fotter"> </div>

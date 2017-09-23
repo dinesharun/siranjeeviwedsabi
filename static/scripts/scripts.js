@@ -87,3 +87,17 @@ function navTo(entry, pgid) {
     currpgid = pgid;
   }
 }
+
+function loadgmap(id) {
+  if(id == 2)
+    $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+Old+Bus+Stand+Tirunelveli+Tamil Nadu+India \
+    &destination=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+  else if(id == 1)
+    $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India \
+    &destination=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+  else
+    $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &q=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+}

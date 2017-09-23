@@ -2,7 +2,7 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .bg { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
 .bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
 .bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
-.cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); z-index: 100; opacity: 0.72; }
+.cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); opacity: 0.72; }
 .header {position: fixed; top: -90%; left: -1px; right: -2px; bottom: 88%; border: 2px double black; border-top: 0px; border-radius: 0px 0px 200% 200%;  }
 .fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; }
 .topnavibtn { position: fixed; left: 47.6%; width: 4.8%; height: auto; bottom: 90%; border: 2px solid #333333; border-radius: 50%; padding: 0px; margin: 0px; padding-top: 4.8%; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); overflow: hidden; z-index: 200; background-color: #cccccc; }
@@ -13,6 +13,9 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .topnavibtnr2 {left: 48.4%; width: 3.2%; padding-top: 3.2%; margin-left: -15%; margin-bottom: 2%; }
 .topnaviicon {position: absolute; top: 0px; left: 0px; width: 99%; padding:0px; margin: 0px; border: 0px; }
 .hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120);}
+.gmap {z-index: 90; opacity: 1; width: 90%; height: 84%; border-radius: 3%; margin-right: 6%; } 
+.gmbtn {z-index: 93; width: 12%; height: 6%; font-size: 81%; margin: 1%; padding: 3px; border: 1px solid black; border-radius: 3%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); }
+.gmbtn:hover {cursor: pointer; border: 2px solid black; background-color: #c9c9c9; box-shadow: 1px 1px 3px rgba(12, 12, 12, 120); }
 @keyframes brideintro { from {left: -50%;} to {left: 12%;} }
 .brideintro {animation-name: brideintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes brideexit { from {left: 12%;} to {left: -50%;} }
@@ -58,9 +61,9 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .inforintro { animation-name: inforintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes inforexit { from {left: 39%;} to {left: 120%;} }
 .inforexit { animation-name: inforexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.infor{position: fixed; left: 120%; top: 15%; width: 63%; height: 69%; border: 2px double black; border-radius: 21% 0px 0px 21%; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+.infor{position: fixed; left: 120%; top: 15%; width: 66%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold;  opacity: 0.72; z-index: 10; overflow: hidden;}
 @keyframes infolintro { from {left: -45%;} to {left: -3%;} }
 .infolintro { animation-name: infolintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes infolexit { from {left: -3%;} to {left: -45%;} }
 .infolexit { animation-name: infolexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.infol{position: fixed; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+.infol{position: fixed; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
