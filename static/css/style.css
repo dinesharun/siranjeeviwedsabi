@@ -34,11 +34,16 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
-@keyframes plhintro { from {top: 120%;} to {top: 39%;} }
-.plhintro { animation-name: plhintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes plhexit { from {top: 39%;} to {top: 120%;} }
-.plhexit { animation-name: plhexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.placeholder{position: fixed; left: 9%; top: 120%; width: 81%; height: 63%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+@keyframes gbintro { from {top: 120%;} to {top: 30%;} }
+.gbintro { animation-name: gbintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes gbexit { from {top: 30%;} to {top: 120%;} }
+.gbexit { animation-name: gbexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.guestbook{position: fixed; left: 9%; top: 120%; width: 81%; height: 72%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+@keyframes gbfintro { from {top: -30%;} to {top: 15%;} }
+.gbfintro { animation-name: gbfintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes gbfexit { from {top: 15%;} to {top: -30%;} }
+.gbfexit { animation-name: gbfexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.guestbookform{position: fixed; left: 12%; top: -30%; width: 75%; height: 12%; border: 2px double black; border-radius: 9%; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
 @keyframes ngintro { from {left: 120%;} to {left: 9%;} }
 .ngintro { animation-name: ngintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes ngexit { from {left: 9%;} to {left: 120%;} }
@@ -49,3 +54,13 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 @keyframes inviaexit { from {left: 9%;} to {left: -90%;} }
 .inviaexit { animation-name: inviaexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .invialbum{position: fixed; left: -90%; top: 36%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
+@keyframes inforintro { from {left: 120%;} to {left: 39%;} }
+.inforintro { animation-name: inforintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes inforexit { from {left: 39%;} to {left: 120%;} }
+.inforexit { animation-name: inforexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.infor{position: fixed; left: 120%; top: 15%; width: 63%; height: 69%; border: 2px double black; border-radius: 21% 0px 0px 21%; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+@keyframes infolintro { from {left: -45%;} to {left: -3%;} }
+.infolintro { animation-name: infolintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes infolexit { from {left: -3%;} to {left: -45%;} }
+.infolexit { animation-name: infolexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.infol{position: fixed; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}

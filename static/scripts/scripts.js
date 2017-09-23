@@ -22,10 +22,22 @@ function navTo(entry, pgid) {
           $("#nanogallery2").removeClass('ngintro');
           $("#nanogallery2").addClass('ngexit');
           break;
+
+        case 3:
+          $("#guestbook").removeClass('gbintro');
+          $("#guestbook").addClass('gbexit');
+          $("#guestbookform").removeClass('gbfintro');
+          $("#guestbookform").addClass('gbfexit');
+          break;
           
+        case 4:
+          $("#infor").removeClass('inforintro');
+          $("#infor").addClass('inforexit');
+          $("#infol").removeClass('infolintro');
+          $("#infol").addClass('infolexit');
+          break;
+ 
         default:
-          $("#placeholder").removeClass('plhintro');
-          $("#placeholder").addClass('plhexit');
           break;
       }
       
@@ -53,10 +65,22 @@ function navTo(entry, pgid) {
         $("#nanogallery2").removeClass('ngexit');
         $("#nanogallery2").addClass('ngintro');
         break;
+
+      case 3:
+        $("#guestbook").removeClass('gbexit');
+        $("#guestbook").addClass('gbintro');
+        $("#guestbookform").removeClass('gbfexit');
+        $("#guestbookform").addClass('gbfintro');
+        break;
         
+      case 4:
+        $("#infor").removeClass('inforexit');
+        $("#infor").addClass('inforintro');
+        $("#infol").removeClass('infolexit');
+        $("#infol").addClass('infolintro');
+        break;
+ 
       default:
-        $("#placeholder").removeClass('plhexit');
-        $("#placeholder").addClass('plhintro');
         break;
     }
     
