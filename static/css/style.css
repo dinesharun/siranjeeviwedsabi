@@ -44,3 +44,8 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 @keyframes ngexit { from {left: 9%;} to {left: 120%;} }
 .ngexit { animation-name: ngexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .nanogallery{position: fixed; left: 120%; top: 36%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
+@keyframes inviaintro { from {left: -90%;} to {left: 9%;} }
+.inviaintro { animation-name: inviaintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes inviaexit { from {left: 9%;} to {left: -90%;} }
+.inviaexit { animation-name: inviaexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.invialbum{position: fixed; left: -90%; top: 36%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}

@@ -12,6 +12,11 @@ function navTo(entry, pgid) {
           $("#bride").addClass('brideexit');
           $("#homeinvite").addClass('inviexit');
           break;
+
+        case 1:
+          $("#invialbum").removeClass('inviaintro');
+          $("#invialbum").addClass('inviaexit');
+          break;
           
         case 2:
           $("#nanogallery2").removeClass('ngintro');
@@ -38,7 +43,12 @@ function navTo(entry, pgid) {
         $("#bride").addClass('brideintro');
         $("#homeinvite").addClass('inviintro');
         break;
-        
+     
+      case 1:
+        $("#invialbum").removeClass('inviaexit');
+        $("#invialbum").addClass('inviaintro');
+        break;
+   
       case 2:
         $("#nanogallery2").removeClass('ngexit');
         $("#nanogallery2").addClass('ngintro');
