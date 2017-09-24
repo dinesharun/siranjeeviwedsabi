@@ -21,8 +21,15 @@
 <div id="groom" class="hdiv groom"> <div class="groomdata"> <br /><br /><br /> Groom: Mr. Siranjeevi </div><img class="groomimg" src="static/imgs/siran.png" /></div>
 <div id="homeinvite" class="hdiv homeinvi"> <br /><br /> Siranjeevi weds Abinaya <br /><br /> Invitation </div>
 <div id="bride" class="hdiv bride"> <div class="bridedata"> <br /><br /><br /> Bride: Ms. Abinaya </div><img class="brideimg" src="static/imgs/abi.png" /></div>
-<div id="guestbook" class="hdiv guestbook"> </div>
-<div id="guestbookform" class="hdiv guestbookform"> </div>
+<div id="guestbook" class="hdiv guestbook"> <h2> Guestbook </h2> </div>
+<div id="guestbookform" class="hdiv guestbookform"> 
+<form id="gbform" action="">
+<textarea class="gfele gmsg" name="gmsg" id="gmsg" onclick="removeVal('gmsg')" onblur="addVal('gmsg')"> Enter your message.... </textarea>
+<input type="text" class="gfele gname" name="gname" id="gname" onclick="removeVal('gname')" onblur="addVal('gname')" value="Name... (Req) " />
+<input type="text" class="gfele gemail" name="gemail" id="gemail" onclick="removeVal('gemail')" onblur="addVal('gemail')" value="E-Mail... (Opt) " />
+<input type="button" class="gfele gpost" name="gpost" value="Post message"/>
+</form>
+</div>
 <div id="infor" class="hdiv infor"> <br /> 
 <span id="gmbtn0" class="gmbtn" onclick="loadgmap(0)"> Venue </span>
 <span id="gmbtn1" class="gmbtn" onclick="loadgmap(1)"> From New Bus Stand </span>
@@ -35,8 +42,8 @@
 </iframe> </div>
 <div id="infol" class="hdiv infol"> <br /><br /> Marriage Details <br /> <br /> Friday, October 27, 2017 <br /> <br /> Between 08:00 to 10:00 AM <br /> <br /> At VMS Kalyaana Mandapam, Tirunelveli <br /> </div>
 <div id="nanogallery2" class="nanogallery" data-nanogallery2='{
-          "thumbnailHeight":  90,
-          "thumbnailWidth":   90,
+          "thumbnailHeight":  180,
+          "thumbnailWidth":   180,
           "thumbnailHoverEffect2": "imageGrayOff|scale120|imageSepiaOn",
           "itemsBaseURL":     "http://siranwedsabi.appspot.com/static/imgs/albums/"
         }' >
@@ -71,7 +78,7 @@
   </div> 
 <div id="invialbum" class="invialbum" data-nanogallery2='{
           "thumbnailHeight":  180,
-          "thumbnailWidth":   180,
+          "thumbnailWidth":   270,
           "thumbnailHoverEffect2": "imageGrayOff|scale120|imageSepiaOn",
           "itemsBaseURL":     "http://siranwedsabi.appspot.com/static/imgs/albums/"
         }' >    

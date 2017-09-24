@@ -101,3 +101,26 @@ function loadgmap(id) {
     $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
     &q=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
 }
+
+function removeVal(id) {
+  var i = document.getElementById(id);
+
+  if(i) {
+    if(i.value==i.defaultValue) {
+      i.value='';
+    }
+    i.style.color = "#000000";
+  }
+}
+
+function addVal(id)
+{
+  var i = document.getElementById(id);
+	
+  if(i)	{
+    if(i.value=='') {
+      i.value=i.defaultValue;
+    }
+    i.style.color = "#545454";
+  }
+}
