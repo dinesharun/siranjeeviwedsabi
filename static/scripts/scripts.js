@@ -1,4 +1,35 @@
-currpgid = 100;
+var currpgid = 100;
+var isItIE   = -1;
+
+function onLoadActions() {
+  isItIE = getInternetExplorerVersion();
+  
+  if(isItIE != -1) {
+    $("#blockIE").css('display', 'block');
+  }
+  
+  registerForms();
+  preloadImages('static/imgs/albums/001.jpg',
+                'static/imgs/albums/002.jpg',
+                'static/imgs/albums/003.jpg',
+                'static/imgs/albums/004.jpg',
+                'static/imgs/albums/005.jpg',
+                'static/imgs/albums/006.jpg');
+  setTimeout(function() { navTo(0, 0); }, 900);
+}
+
+function getInternetExplorerVersion() {
+   var rv = -1; 
+   
+   if (navigator.appName == 'Microsoft Internet Explorer') {
+      var ua = navigator.userAgent;
+      var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+      if (re.exec(ua) != null)
+         rv = parseFloat( RegExp.$1 );
+   }
+   
+   return rv;
+}
 
 function navTo(entry, pgid) {
   if(entry == 0) {
@@ -43,6 +74,8 @@ function navTo(entry, pgid) {
       
       setTimeout(function () { navTo(1, pgid); }, 900);
     } else {
+      $("#loader").addClass('loaded');
+      setTimeout(function () { $("#loader").css('display', 'none'); }, 3300);
       setTimeout(function () { navTo(1, pgid); }, 10);
     }
   } else {
@@ -123,4 +156,43 @@ function addVal(id)
     }
     i.style.color = "#545454";
   }
+}
+
+function registerForms() {
+	if(isItIE != -1) {
+		$("#gbform").submit(function(event) {
+		 
+		  /* stop form from submitting normally */
+		  event.preventDefault();
+		  
+		  /* get some values from elements on the page: */
+		  var $form = $( this ),
+			  name  = $form.find( 'input[name="gname"]' ).val(),
+			  email = $form.find( 'input[name="gemail"]' ).val(),
+			  log   = $form.find( 'textarea[name="gmsg"]' ).val(),
+			  url = $form.attr( 'action' );
+		  
+		  /* Validate the form */
+		  if((name == "") || (name == " ") || (name == "Name... (Req)")) {
+			  alert("A Valid Name is required for Posting....");
+		  } else if((log == "") || (log == " ") || (log == " Enter Your Wishes in Our Guestbook... ")) {
+			  alert("At least something is required for Posting....");
+		  } else {
+			  /* Send the data using post */
+			  this.submit();
+		  }
+		});
+	}
+}
+
+function preloadImages(images) {
+	var i = 0;
+	var imageArray = new Array();
+	var imageObj   = new Image();
+	
+	imageArray = images.split(',');
+	
+	for(i=0; i<=imageArray.length-1; i++)  {
+		imageObj.src=imageArray[i];
+	}
 }
