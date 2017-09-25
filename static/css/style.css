@@ -3,7 +3,7 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
 .bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
 @keyframes loaded { from {opacity: 0.93;} to {opacity: 0.03;} }
-.loaded {animation-name: loaded; animation-duration: 3s; animation-fill-mode: forwards;}
+.loaded {animation-name: loaded; animation-duration: 2s; animation-fill-mode: forwards;}
 .loader {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #363636; opacity: 0.93; display: block; z-index: 300; color: #cccccf; font-weight: bold; text-align: center; font-size: 180%; padding: 18%; }
 .blockIE {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #121212; opacity: 0.96; display: none; z-index: 300; color: red; font-weight: bold; text-align: center; font-size: 240%; }
 .cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); opacity: 0.72; }
@@ -45,7 +45,7 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .gbintro { animation-name: gbintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes gbexit { from {top: 30%;} to {top: 120%;} }
 .gbexit { animation-name: gbexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.guestbook{position: fixed; left: 9%; top: 120%; width: 81%; height: 72%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+.guestbook{position: fixed; left: 9%; top: 120%; width: 81%; height: 72%; border: 2px double black; border-radius: 12% 12% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; overflow: hidden;}
 @keyframes gbfintro { from {top: -30%;} to {top: 15%;} }
 .gbfintro { animation-name: gbfintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes gbfexit { from {top: 15%;} to {top: -30%;} }
@@ -77,3 +77,12 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 @keyframes infolexit { from {left: -3%;} to {left: -45%;} }
 .infolexit { animation-name: infolexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .infol{position: fixed; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
+.cmtLoading{margin-top:1%;padding-left:42%;padding-right:42%;text-align:center;}
+.cmtList{overflow:auto;height:78%;text-shadow:0px 1px #000000;}		  
+.cmt{border: 1px dotted #111111;padding:0.6%;margin:0px;margin-top:1%;border-radius:9% 9% 9% 9%;-moz-border-radius:9% 9% 9% 9%;
+	 font-size:81%;color:#660000;text-align:left;font-family:Handlee;background-image:url('../imgs/cbg.png'); width: 93%; margin-left: 3%;  }
+.cmt0{background-color:#eeeeee;}
+.cmt1{background-color:#e0e0e0;}
+.cmtNo{float:right;font-size:54%;color:#000000;font-family:offside;text-shadow:0px 0px 1px #ffffff;}
+.cmtDate{text-align:right;font-size:60%;color:#000099;font-family:Salsa;text-shadow:0px 0px #ffffff;}
+.cmtName{text-align:right;font-size:81%;color:#661111;font-family:Handlee;}
