@@ -16,6 +16,7 @@ function onLoadActions() {
                 'static/imgs/albums/005.jpg',
                 'static/imgs/albums/006.jpg');
   setTimeout(function() { navTo(0, 0); }, 900);
+  fillGuestBook();
 }
 
 function getInternetExplorerVersion() {
@@ -159,30 +160,34 @@ function addVal(id)
 }
 
 function registerForms() {
-	if(isItIE != -1) {
-		$("#gbform").submit(function(event) {
-		 
-		  /* stop form from submitting normally */
-		  event.preventDefault();
-		  
-		  /* get some values from elements on the page: */
-		  var $form = $( this ),
-			  name  = $form.find( 'input[name="gname"]' ).val(),
-			  email = $form.find( 'input[name="gemail"]' ).val(),
-			  log   = $form.find( 'textarea[name="gmsg"]' ).val(),
-			  url = $form.attr( 'action' );
-		  
-		  /* Validate the form */
-		  if((name == "") || (name == " ") || (name == "Name... (Req)")) {
-			  alert("A Valid Name is required for Posting....");
-		  } else if((log == "") || (log == " ") || (log == " Enter Your Wishes in Our Guestbook... ")) {
-			  alert("At least something is required for Posting....");
-		  } else {
-			  /* Send the data using post */
-			  this.submit();
-		  }
-		});
-	}
+	$("#gbform").submit(function(event) {
+    event.preventDefault();
+   
+    var $form = $( this ),
+      name  = $form.find( 'input[name="gname"]' ).val(),
+      email = $form.find( 'input[name="gemail"]' ).val(),
+      log   = $form.find( 'textarea[name="gmsg"]' ).val();
+
+    url = "https://swadatastoregb.appspot.com/guestbook/greet";
+    
+    if((name == "") || (name == " ") || (name == "Name... (Req) ")) {
+      alert("A Valid Name is required for Posting....");
+    } else if((log == "") || (log == " ") || (log == " Enter Your Wishes in Our Guestbook... ")) {
+      alert("At least something is required for Posting....");
+    } else {
+      var posting = $.post( url, { name: name, email: email, log: log, test: 1 }, null, "json");
+    
+      var n = document.getElementById("gname"); if(n) {n.value = "Name... (Req) "};
+      var e = document.getElementById("gemail"); if(e) {e.value = "Email... (Opt) "};
+      var l = document.getElementById("gmsg"); if(l) {l.value = " Enter Your Wishes in Our Guestbook... "};		
+   
+      posting.done(function( data ) {
+        $(".guestbook").prepend('<div class="cmt cmt' + (lastCmtId%2) + '" id="gC' + (n) + '"><div class="cmtNo">(' + (lastCmtId++) + ')</div>' 
+                      + data[0].Post + '<div class="cmtName">' 
+                      + data[0].Name + ' </div> <div class="cmtDate"> ' + data[0].CreatedTime + ' </div></div>');
+      });
+    }
+  });
 }
 
 function preloadImages(images) {
@@ -195,4 +200,38 @@ function preloadImages(images) {
 	for(i=0; i<=imageArray.length-1; i++)  {
 		imageObj.src=imageArray[i];
 	}
+}
+
+function fillGuestBook() {
+	var url = "";
+	var c1 = document.getElementById("guestbook");
+	
+  if(c1) {	
+    c1.innerHTML = '<div class="cmtLoading"> <img style="width:99%;" src="imgs/loading.gif" /> </div>';
+  }
+
+	url ="https://swadatastoregb.appspot.com/root";
+		
+  var getting = $.get(url, "", null, "json" );	
+
+  getting.done(function( data )  {
+    var i = 0;
+    var c = document.getElementById("guestbook");
+    
+    if(c) {	
+      c.innerHTML = "";
+        
+      for(i=0;i<=data.length-1;i++) {
+        if((data[i].Post != undefined) && (data[i].Name != undefined) && (data[i].CreatedTime != undefined)) {
+          c.innerHTML += '<div class="cmt cmt' + (i%2) + '"id="gC' + (i) + '"><div class="cmtNo">(' + (data.length - (i+1)) + ')</div>' 
+                  + data[i].Post + '<div class="cmtName">' 
+                  + data[i].Name + ' </div> <div class="cmtDate"> ' + data[i].CreatedTime + ' </div></div>';
+        }
+      }		
+      
+      lastCmtId = data.length;
+        
+      c.innerHTML += "<br /><br /><br /><br /> ~~~ End of Wishes ~~~ <br /><br /><br />";
+    }
+  });
 }
