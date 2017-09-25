@@ -2,6 +2,10 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .bg { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
 .bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
 .bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
+@keyframes loaded { from {opacity: 0.93;} to {opacity: 0.03;} }
+.loaded {animation-name: loaded; animation-duration: 3s; animation-fill-mode: forwards;}
+.loader {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #363636; opacity: 0.93; display: block; z-index: 300; color: #cccccf; font-weight: bold; text-align: center; font-size: 180%; padding: 18%; }
+.blockIE {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #121212; opacity: 0.96; display: none; z-index: 300; color: red; font-weight: bold; text-align: center; font-size: 240%; }
 .cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); opacity: 0.72; }
 .header {position: fixed; top: -90%; left: -1px; right: -2px; bottom: 88%; border: 2px double black; border-top: 0px; border-radius: 0px 0px 200% 200%;  }
 .fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; }
