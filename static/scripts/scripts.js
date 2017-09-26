@@ -17,6 +17,7 @@ function onLoadActions() {
                 'static/imgs/albums/006.jpg');
   setTimeout(function() { navTo(0, 0); }, 900);
   fillGuestBook();
+  jQuery('.scrollbar-chrome').scrollbar();
 }
 
 function getInternetExplorerVersion() {
@@ -76,7 +77,7 @@ function navTo(entry, pgid) {
       setTimeout(function () { navTo(1, pgid); }, 900);
     } else {
       $("#loader").addClass('loaded');
-      setTimeout(function () { $("#loader").css('display', 'none'); }, 3300);
+      setTimeout(function () { $("#loader").css('display', 'none'); }, 1800);
       setTimeout(function () { navTo(1, pgid); }, 10);
     }
   } else {
@@ -182,7 +183,7 @@ function registerForms() {
       var l = document.getElementById("gmsg"); if(l) {l.value = " Enter Your Wishes in Our Guestbook... "};		
    
       posting.done(function( data ) {
-        $(".guestbook").prepend('<div class="cmt cmt' + (lastCmtId%2) + '" id="gC' + (n) + '"><div class="cmtNo">(' + (lastCmtId++) + ')</div>' 
+        $(".gbinner").prepend('<div class="cmt cmt' + (lastCmtId%2) + '" id="gC' + (n) + '"><div class="cmtNo">(' + (lastCmtId++) + ')</div>' 
                       + data[0].Post + '<div class="cmtName">' 
                       + data[0].Name + ' </div> <div class="cmtDate"> ' + data[0].CreatedTime + ' </div></div>');
       });
@@ -204,7 +205,7 @@ function preloadImages(images) {
 
 function fillGuestBook() {
 	var url = "";
-	var c1 = document.getElementById("guestbook");
+	var c1 = document.getElementById("gbinner");
 	
   if(c1) {	
     c1.innerHTML = '<div class="cmtLoading"> <img style="width:99%;" src="imgs/loading.gif" /> </div>';
@@ -216,7 +217,7 @@ function fillGuestBook() {
 
   getting.done(function( data )  {
     var i = 0;
-    var c = document.getElementById("guestbook");
+    var c = document.getElementById("gbinner");
     
     if(c) {	
       c.innerHTML = "";
@@ -231,7 +232,7 @@ function fillGuestBook() {
       
       lastCmtId = data.length;
         
-      c.innerHTML += "<br /><br /><br /><br /> ~~~ End of Wishes ~~~ <br /><br /><br />";
+      c.innerHTML += "<br /><br /><br /><br /> ~~~ End of Wishes ~~~ <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />";
     }
   });
 }
