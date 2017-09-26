@@ -4,9 +4,11 @@
 <title> - Siranjeevi Weds Abinaya - </title>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link rel="stylesheet" type="text/css" href="static/css/jquery.scrollbar.css">
 <link rel="stylesheet" type="text/css" href="static/nanogallery/css/nanogallery2.min.css">
 <script type="text/javascript" src="static/scripts/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="static/nanogallery/jquery.nanogallery2.min.js"></script>
+<script type="text/javascript" src="static/scripts/jquery.scrollbar.min.js"></script>
 <script type="text/javascript" src="static/scripts/scripts.js"></script>
 </head>
 <body onload="onLoadActions()">
@@ -23,7 +25,7 @@
 <div id="groom" class="hdiv groom"> <div class="groomdata"> <br /><br /><br /> Groom: Mr. Siranjeevi </div><img class="groomimg" src="static/imgs/siran.png" /></div>
 <div id="homeinvite" class="hdiv homeinvi"> <br /><br /> Siranjeevi weds Abinaya <br /><br /> Invitation </div>
 <div id="bride" class="hdiv bride"> <div class="bridedata"> <br /><br /><br /> Bride: Ms. Abinaya </div><img class="brideimg" src="static/imgs/abi.png" /></div>
-<div id="guestbook" class="hdiv guestbook"> <h2> Guestbook </h2> </div>
+<div id="guestbook" class="hdiv guestbook"> <h2> Guestbook </h2> <div id="gbinner" class="gbinner scrollbar-chrome"> </div></div>
 <div id="guestbookform" class="hdiv guestbookform"> 
 <form id="gbform" action="https://dineshwedsindudatastore.appspot.com/entries" method="post">
 <textarea class="gfele gmsg" name="gmsg" id="gmsg" onclick="removeVal('gmsg')" onblur="addVal('gmsg')"> Enter Your Wishes in Our Guestbook... </textarea>
