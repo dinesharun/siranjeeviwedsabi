@@ -1,5 +1,7 @@
 var currpgid = 100;
 var isItIE   = -1;
+var lastCmtId = 100;
+var idle = 0;
 
 function onLoadActions() {
   isItIE = getInternetExplorerVersion();
@@ -34,92 +36,96 @@ function getInternetExplorerVersion() {
 }
 
 function navTo(entry, pgid) {
-  if(entry == 0) {
-    if(currpgid != 100) {
-      switch(currpgid) {
-        case 0:
-          $("#groom").removeClass('groomintro');
-          $("#bride").removeClass('brideintro');
-          $("#homeinvite").removeClass('inviintro');
-          $("#groom").addClass('groomexit');
-          $("#bride").addClass('brideexit');
-          $("#homeinvite").addClass('inviexit');
-          break;
+  if((idle == 0) || (entry != 0)) {
+    idle = 1;
+    if(entry == 0) {
+      if(currpgid != 100) {
+        switch(currpgid) {
+          case 0:
+            $("#groom").removeClass('groomintro');
+            $("#bride").removeClass('brideintro');
+            $("#homeinvite").removeClass('inviintro');
+            $("#groom").addClass('groomexit');
+            $("#bride").addClass('brideexit');
+            $("#homeinvite").addClass('inviexit');
+            break;
 
-        case 1:
-          $("#invialbum").removeClass('inviaintro');
-          $("#invialbum").addClass('inviaexit');
+          case 1:
+            $("#invialbum").removeClass('inviaintro');
+            $("#invialbum").addClass('inviaexit');
+            break;
+            
+          case 2:
+            $("#nanogallery2").removeClass('ngintro');
+            $("#nanogallery2").addClass('ngexit');
+            break;
+
+          case 3:
+            $("#guestbook").removeClass('gbintro');
+            $("#guestbook").addClass('gbexit');
+            $("#guestbookform").removeClass('gbfintro');
+            $("#guestbookform").addClass('gbfexit');
+            break;
+            
+          case 4:
+            $("#infor").removeClass('inforintro');
+            $("#infor").addClass('inforexit');
+            $("#infol").removeClass('infolintro');
+            $("#infol").addClass('infolexit');
+            break;
+   
+          default:
+            break;
+        }
+        
+        setTimeout(function () { navTo(1, pgid); }, 900);
+      } else {
+        $("#loader").addClass('loaded');
+        setTimeout(function () { $("#loader").css('display', 'none'); }, 1800);
+        setTimeout(function () { navTo(1, pgid); }, 10);
+      }
+    } else {
+      switch(pgid) {
+        case 0:
+          $("#groom").removeClass('groomexit');
+          $("#bride").removeClass('brideexit');
+          $("#homeinvite").removeClass('inviexit');
+          $("#groom").addClass('groomintro');
+          $("#bride").addClass('brideintro');
+          $("#homeinvite").addClass('inviintro');
           break;
-          
+       
+        case 1:
+          $("#invialbum").removeClass('inviaexit');
+          $("#invialbum").addClass('inviaintro');
+          break;
+     
         case 2:
-          $("#nanogallery2").removeClass('ngintro');
-          $("#nanogallery2").addClass('ngexit');
+          $("#nanogallery2").removeClass('ngexit');
+          $("#nanogallery2").addClass('ngintro');
           break;
 
         case 3:
-          $("#guestbook").removeClass('gbintro');
-          $("#guestbook").addClass('gbexit');
-          $("#guestbookform").removeClass('gbfintro');
-          $("#guestbookform").addClass('gbfexit');
+          $("#guestbook").removeClass('gbexit');
+          $("#guestbook").addClass('gbintro');
+          $("#guestbookform").removeClass('gbfexit');
+          $("#guestbookform").addClass('gbfintro');
           break;
           
         case 4:
-          $("#infor").removeClass('inforintro');
-          $("#infor").addClass('inforexit');
-          $("#infol").removeClass('infolintro');
-          $("#infol").addClass('infolexit');
+          $("#infor").removeClass('inforexit');
+          $("#infor").addClass('inforintro');
+          $("#infol").removeClass('infolexit');
+          $("#infol").addClass('infolintro');
           break;
- 
+   
         default:
           break;
       }
       
-      setTimeout(function () { navTo(1, pgid); }, 900);
-    } else {
-      $("#loader").addClass('loaded');
-      setTimeout(function () { $("#loader").css('display', 'none'); }, 1800);
-      setTimeout(function () { navTo(1, pgid); }, 10);
+      currpgid = pgid;
+      idle = 0;
     }
-  } else {
-    switch(pgid) {
-      case 0:
-        $("#groom").removeClass('groomexit');
-        $("#bride").removeClass('brideexit');
-        $("#homeinvite").removeClass('inviexit');
-        $("#groom").addClass('groomintro');
-        $("#bride").addClass('brideintro');
-        $("#homeinvite").addClass('inviintro');
-        break;
-     
-      case 1:
-        $("#invialbum").removeClass('inviaexit');
-        $("#invialbum").addClass('inviaintro');
-        break;
-   
-      case 2:
-        $("#nanogallery2").removeClass('ngexit');
-        $("#nanogallery2").addClass('ngintro');
-        break;
-
-      case 3:
-        $("#guestbook").removeClass('gbexit');
-        $("#guestbook").addClass('gbintro');
-        $("#guestbookform").removeClass('gbfexit');
-        $("#guestbookform").addClass('gbfintro');
-        break;
-        
-      case 4:
-        $("#infor").removeClass('inforexit');
-        $("#infor").addClass('inforintro');
-        $("#infol").removeClass('infolexit');
-        $("#infol").addClass('infolintro');
-        break;
- 
-      default:
-        break;
-    }
-    
-    currpgid = pgid;
   }
 }
 
@@ -183,9 +189,10 @@ function registerForms() {
       var l = document.getElementById("gmsg"); if(l) {l.value = " Enter Your Wishes in Our Guestbook... "};		
    
       posting.done(function( data ) {
-        $(".gbinner").prepend('<div class="cmt cmt' + (lastCmtId%2) + '" id="gC' + (n) + '"><div class="cmtNo">(' + (lastCmtId++) + ')</div>' 
+        /*$("#gbinner").prepend('<div class="cmt cmt' + (lastCmtId%2) + '" id="gC' + (lastCmtId) + '"><div class="cmtNo">(' + (lastCmtId++) + ')</div>' 
                       + data[0].Post + '<div class="cmtName">' 
-                      + data[0].Name + ' </div> <div class="cmtDate"> ' + data[0].CreatedTime + ' </div></div>');
+                      + data[0].Name + ' </div> <div class="cmtDate"> ' + data[0].CreatedTime + ' </div></div>');*/
+        fillGuestBook();                      
       });
     }
   });
@@ -208,7 +215,7 @@ function fillGuestBook() {
 	var c1 = document.getElementById("gbinner");
 	
   if(c1) {	
-    c1.innerHTML = '<div class="cmtLoading"> <img style="width:99%;" src="imgs/loading.gif" /> </div>';
+    c1.innerHTML = '<div class="cmtLoading"> <img style="width:99%;" src="static/imgs/loading.gif" /> </div>';
   }
 
 	url ="https://swadatastoregb.appspot.com/root";
