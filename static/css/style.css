@@ -38,6 +38,8 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .inviintro { animation-name: inviintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes inviexit { from {top: 57%;} to {top: 180%;} }
 .inviexit { animation-name: inviexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.homebannerl {position: fixed; top: -6%; left: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
+.homebannerr {position: fixed; top: -6%; right: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
 .homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
