@@ -32,8 +32,10 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .groom{position: fixed; left: -50%; top: 15%; width: 37.8%; height: 39%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
 .bridedata { width: 96%; height: 96%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 2%; }
 .groomdata { width: 96%; height: 96%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 2%; }
-.brideimg {position: absolute; width: 33%; height: auto; right: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%); }
-.groomimg {position: absolute; width: 33%; height: auto; left: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%); }
+.brideimg {position: absolute; width: 42%; height: auto; right: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
+.brideimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
+.groomimg {position: absolute; width: 45%; height: auto; left: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
+.groomimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
 @keyframes inviintro { from {top: 180%;} to {top: 57%;} }
 .inviintro { animation-name: inviintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes inviexit { from {top: 57%;} to {top: 180%;} }
