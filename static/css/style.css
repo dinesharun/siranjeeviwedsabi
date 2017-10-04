@@ -1,4 +1,4 @@
-body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: black;}
+body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: black;}
 .bg { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
 .bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
 .bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
@@ -8,8 +8,10 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .blockIE {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #121212; opacity: 0.96; display: none; z-index: 300; color: red; font-weight: bold; text-align: center; font-size: 240%; }
 .cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); opacity: 0.72; }
 .header {position: fixed; top: -90%; left: -1px; right: -2px; bottom: 88%; border: 2px double black; border-top: 0px; border-radius: 0px 0px 200% 200%;  }
-.fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; padding-top: 1%; }
-.cdtime {font-family: VT323; font-size: 150%; }
+.fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; padding-top: 3px; }
+.meta {font-size: 45%; color: dark-gray; }
+.cdtime {font-family: VT323; font-size: 138%; color: brown; }
+.cdnum {font-size: 111%; color: blue;}
 .topnavibtn { position: fixed; left: 47.6%; width: 4.8%; height: auto; bottom: 90%; border: 2px solid #333333; border-radius: 50%; padding: 0px; margin: 0px; padding-top: 4.8%; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); overflow: hidden; z-index: 200; background-color: #cccccc; }
 .topnavibtn:hover {cursor: pointer; border: 3px solid black; }
 .topnavibtnl1 {left: 48%; width: 4%; padding-top: 4%; margin-left: 8%; margin-bottom: 0.8%; }
@@ -19,25 +21,30 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .topnaviicon {position: absolute; top: 0px; left: 0px; width: 99%; padding:0px; margin: 0px; border: 0px; }
 .hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120); font-family: Macondo;}
 .gmap {z-index: 90; opacity: 1; width: 90%; height: 84%; border-radius: 3%; margin-right: 6%; } 
+.tmap {z-index: 90; opacity: 1; width: 81%; height: 84%; border-radius: 3%; margin-left: 3%; } 
 .gmbtn {z-index: 93; width: 12%; height: 6%; font-size: 81%; margin: 1%; padding: 3px; border: 1px solid black; border-radius: 3%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); }
 .gmbtn:hover {cursor: pointer; border: 2px solid black; background-color: #c9c9c9; box-shadow: 1px 1px 3px rgba(12, 12, 12, 120); }
-@keyframes brideintro { from {right: -50%;} to {right: 12%;} }
+.tmbtn {z-index: 93; width: 12%; height: auto; font-size: 81%; margin: 0px; padding: 3%; border: 1px solid black; border-radius: 50%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); text-shadow: 1px 1px 9px black, -1px -1px 9px black, 2px 2px 9px black, -2px -2px 9px black; color: white; font-weight: bold; background-size: 100% 100%; }
+.tmbtn:hover {cursor: pointer; border: 2px solid black; background-color: #c9c9c9; box-shadow: 1px 1px 3px rgba(12, 12, 12, 120); }
+@keyframes brideintro { from {right: -50%;} to {right: 9%;} }
 .brideintro {animation-name: brideintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes brideexit { from {right: 12%;} to {right: -50%;} }
+@keyframes brideexit { from {right: 9%;} to {right: -50%;} }
 .brideexit {animation-name: brideexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.bride{position: fixed; right: -50%; top: 15%; width: 37.8%; height: 33%;  border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
-@keyframes groomintro { from {left: -50%;} to {left: 12%;} }
+.bride{position: fixed; right: -50%; top: 15%; width: 40.8%; height: 33%;  border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
+@keyframes groomintro { from {left: -50%;} to {left: 9%;} }
 .groomintro {animation-name: groomintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes groomexit { from {left: 12%;} to {left: -50%;} }
+@keyframes groomexit { from {left: 9%;} to {left: -50%;} }
 .groomexit {animation-name: groomexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.groom{position: fixed; left: -50%; top: 15%; width: 37.8%; height: 33%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
-.bridedata { width: 91%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 3%; padding-left: 3%; }
-.groomdata { width: 91%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 3%; padding-right: 3%; }
-.brideimg {position: absolute; width: 42%; height: auto; right: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
+.groom{position: fixed; left: -50%; top: 15%; width: 40.8%; height: 33%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
+.bridedata { width: 96%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
+.groomdata { width: 96%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
+.brideimg {position: absolute; width: 39%; height: auto; left: 72%; bottom: 0%; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .brideimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
-.groomimg {position: absolute; width: 45%; height: auto; left: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
+.groomimg {position: absolute; width: 39%; height: auto; right: 72%; bottom: 0%; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .groomimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
-.cplName {font-family: 'Lobster Two'; font-size: 360%; color: #333300; text-shadow: 1px 1px 6px black; }
+.cplName {position: absolute; bottom: 30%; font-family: 'Lobster Two'; font-size: 360%; color: #333300; text-shadow: 1px 1px 6px black; z-index: 45; }
+.cplbride {left: 9%;}
+.cplgroom{right: 9%;}
 @keyframes inviintro { from {top: 180%;} to {top: 51%;} }
 .inviintro { animation-name: inviintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes inviexit { from {top: 51%;} to {top: 180%;} }
@@ -69,11 +76,6 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 @keyframes ngexit { from {left: 9%;} to {left: 120%;} }
 .ngexit { animation-name: ngexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .nanogallery{position: fixed; left: 120%; top: 36%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
-@keyframes inviaintro { from {left: -90%;} to {left: 9%;} }
-.inviaintro { animation-name: inviaintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes inviaexit { from {left: 9%;} to {left: -90%;} }
-.inviaexit { animation-name: inviaexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.invialbum{position: fixed; left: -90%; top: 36%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
 @keyframes inforintro { from {left: 120%;} to {left: 39%;} }
 .inforintro { animation-name: inforintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes inforexit { from {left: 39%;} to {left: 120%;} }
@@ -84,6 +86,16 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 @keyframes infolexit { from {left: -3%;} to {left: -45%;} }
 .infolexit { animation-name: infolexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .infol{position: fixed; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
+@keyframes tourrintro { from {left: 120%;} to {left: 45%;} }
+.tourrintro { animation-name: tourrintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes tourrexit { from {left: 45%;} to {left: 120%;} }
+.tourrexit { animation-name: tourrexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.tourr{position: fixed; left: 120%; top: 15%; width: 55.5%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
+@keyframes tourlintro { from {left: -45%;} to {left: -3%;} }
+.tourlintro { animation-name: tourlintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes tourlexit { from {left: -3%;} to {left: -45%;} }
+.tourlexit { animation-name: tourlexit; animation-duration: 2s; animation-fill-mode: forwards;}
+.tourl{position: fixed; left: -45%; top: 15%; width: 45%; height: 69%; border: 2px double black; border-radius: 0px 3% 3% 0px; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10;}
 .cmtLoading{margin-top:1%;padding-left:42%;padding-right:42%;text-align:center;}
 .cmtList{overflow:auto;height:78%;text-shadow:0px 1px #000000;}		  
 .cmt{border: 1px dotted #111111;padding:0.6%;margin:0px;margin-top:1%;border-radius:9% 9% 9% 9%;-moz-border-radius:9% 9% 9% 9%;
