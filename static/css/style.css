@@ -2,6 +2,8 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .bg { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
 .bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
 .bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
+.firstWord {color:darkred; font-size:360%; font-family: 'Miss Fajardose';}
+.secondWord {color:red; font-size:270%; font-family: 'Miss Fajardose';}
 @keyframes loaded { from {opacity: 0.93;} to {opacity: 0.03;} }
 .loaded {animation-name: loaded; animation-duration: 2s; animation-fill-mode: forwards;}
 .loader {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #363636; opacity: 0.93; display: block; z-index: 300; color: #cccccf; font-weight: bold; text-align: center; font-size: 180%; padding: 18%; }
@@ -36,13 +38,13 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 @keyframes groomexit { from {left: 9%;} to {left: -50%;} }
 .groomexit {animation-name: groomexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .groom{position: fixed; left: -50%; top: 15%; width: 40.8%; height: 33%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
-.bridedata { width: 96%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
-.groomdata { width: 96%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
+.bridedata { width: 96%; height: 94%;  border: 0px; font-size: 450%; font-weight: bold; font-family: 'Miss Fajardose'; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
+.groomdata { width: 96%; height: 94%;  border: 0px; font-size: 450%; font-weight: bold; font-family: 'Miss Fajardose'; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
 .brideimg {position: absolute; width: 39%; height: auto; left: 72%; bottom: 0%; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .brideimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
 .groomimg {position: absolute; width: 39%; height: auto; right: 72%; bottom: 0%; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .groomimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
-.cplName {position: absolute; bottom: 30%; font-family: 'Lobster Two'; font-size: 360%; color: #333300; text-shadow: 1px 1px 6px black; z-index: 45; }
+.cplName {position: absolute; bottom: 30%; font-family: 'Lobster Two'; font-size: 150%; color: #333300; color: lightblue; text-shadow: 1px 1px 1px rgb(0, 0, 0), -1px -1px 1px black, 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px black, 1px 1px 3px rgb(0, 0, 0), -1px -1px 3px black; z-index: 45; }
 .cplbride {left: 9%;}
 .cplgroom{right: 9%;}
 @keyframes inviintro { from {top: 180%;} to {top: 51%;} }
@@ -51,7 +53,7 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .inviexit { animation-name: inviexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .homebannerl {position: fixed; top: -6%; left: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
 .homebannerr {position: fixed; top: -6%; right: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
-.homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 54%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-family: 'Merienda One'; font-size: 180%; font-weight: bold; text-shadow: 0px 0px 0px black;}
+.homeinvi{position: fixed; left: 9%; top: 180%; width: 75%; height: 54%; padding: 3%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-family: 'Merienda One'; font-size: 150%; font-weight: bold; text-shadow: 0px 0px 0px black;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
 @keyframes gbintro { from {top: 120%;} to {top: 30%;} }
