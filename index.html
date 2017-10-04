@@ -2,7 +2,7 @@
 <html>
 <head>
 <title> - Siranjeevi Weds Abinaya - </title>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu|Macondo|Lobster+Two|Merienda+One|VT323" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Macondo|Lobster+Two|Merienda+One|VT323|Basic" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="static/css/style.css">
 <link rel="stylesheet" type="text/css" href="static/css/jquery.scrollbar.css">
 <link rel="stylesheet" type="text/css" href="static/nanogallery/css/nanogallery2.min.css">
@@ -11,20 +11,20 @@
 <script type="text/javascript" src="static/scripts/jquery.scrollbar.min.js"></script>
 <script type="text/javascript" src="static/scripts/scripts.js"></script>
 </head>
-<body onload="onLoadActions()">
+<body onload="onLoadActions()" onresize="resizeMe()">
 <div class="bg bg1"></div>
 <div class="bg bg2"></div>
 <div class="cmnhf header"> </div>
 <div id="loader" class="loader"> <br /><br /><br /> <h2>Loading...</h2>  <img style="width:6%;" src="static/imgs/loading.gif" /> </div>
 <div id="blockIE" class="blockIE"> <br /><br /><br /> <h2> Internet Explorer is not Supported </h2> </div>
 <div class="topnavibtn" onclick="navTo(0, 0)"> <img class="topnaviicon" src="static/imgs/home.png" /> </div>
-<div class="topnavibtn topnavibtnr1" onclick="navTo(0, 1)"> <img class="topnaviicon" src="static/imgs/invi.png" /> </div>
+<div class="topnavibtn topnavibtnr2" onclick="navTo(0, 1)"> <img class="topnaviicon" src="static/imgs/tour.png" /> </div>
 <div class="topnavibtn topnavibtnl1" onclick="navTo(0, 2)"> <img class="topnaviicon" src="static/imgs/albums.png" /> </div>
 <div class="topnavibtn topnavibtnl2" onclick="navTo(0, 3)"> <img class="topnaviicon" src="static/imgs/guestbook.png" /> </div>
-<div class="topnavibtn topnavibtnr2" onclick="navTo(0, 4)"> <img class="topnaviicon" src="static/imgs/info.png" /> </div>
-<div id="groom" class="hdiv groom"> <div class="groomdata"> <br /><br /> Groom <br /><br /><br /> <span class="cplName"> Mr. Siranjeevi </span> </div><img class="groomimg" src="static/imgs/siran.png" /></div>
+<div class="topnavibtn topnavibtnr1" onclick="navTo(0, 4)"> <img class="topnaviicon" src="static/imgs/timedate.png" /> </div>
+<div id="groom" class="hdiv groom"> <div class="groomdata"> Groom <span class="cplName cplgroom"> Mr. Siranjeevi </span> </div><img class="groomimg" src="static/imgs/siran.png" /></div>
 <div id="homeinvite" class="hdiv homeinvi"> <br /><br /> Siranjeevi weds Abinaya <br /><br /> Invitation </div>
-<div id="bride" class="hdiv bride"> <div class="bridedata"> <br /><br /> Bride <br /><br /><br /> <span class="cplName"> Ms. Abinaya </span> </div><img class="brideimg" src="static/imgs/abi.png" /></div>
+<div id="bride" class="hdiv bride"> <div class="bridedata"> Bride <span class="cplName cplbride"> Ms. Abinaya </span> </div><img class="brideimg" src="static/imgs/abi.png" /></div>
 <div id="homebannerl" class="homebannerl"></div>
 <div id="homebannerr" class="homebannerr"></div>
 <div id="guestbook" class="hdiv guestbook"> <h2> Guestbook </h2> <div id="gbinner" class="gbinner scrollbar-chrome"> </div></div>
@@ -72,27 +72,32 @@
     <a href="005.jpg" data-ngid="45" data-ngalbumid="2" data-ngThumb="005.jpg"> Siranjeevi </a>
     <a href="006.jpg" data-ngid="46" data-ngalbumid="2" data-ngThumb="006.jpg"> Siranjeevi </a> -->
     
-    <a href="" data-ngkind="album" data-ngid="3" data-ngThumb="eac.png" data-ngthumbImgHeight="150" data-ngthumbImgWidth="150"> Engagement </a>
+    <a href="" data-ngkind="album" data-ngid="3" data-ngThumb="invi.png" data-ngthumbImgHeight="150" data-ngthumbImgWidth="150"> Invitations </a>
     
-    <a href="e01.jpg" data-ngid="81" data-ngalbumid="3" data-ngThumb="te01.jpg"> Siran & Abi </a>
-    <a href="e02.jpg" data-ngid="82" data-ngalbumid="3" data-ngThumb="te02.jpg"> Siran & Abi </a>
+    <a href="finvif.jpg" data-ngid="81" data-ngalbumid="3" data-ngThumb="finvif.jpg"> Friends Invite - Front </a>
+    <a href="finvib.jpg" data-ngid="82" data-ngalbumid="3" data-ngThumb="finvib.jpg"> Friends Invite - Back </a>
+    
+    <a href="" data-ngkind="album" data-ngid="4" data-ngThumb="eac.png" data-ngthumbImgHeight="150" data-ngthumbImgWidth="150"> Engagement </a>
+    
+    <a href="e01.jpg" data-ngid="121" data-ngalbumid="4" data-ngThumb="te01.jpg"> Siran & Abi </a>
+    <a href="e02.jpg" data-ngid="122" data-ngalbumid="4" data-ngThumb="te02.jpg"> Siran & Abi </a>
     <!-- <a href="003.jpg" data-ngid="83" data-ngalbumid="3" data-ngThumb="003.jpg"> Siran & Abi </a>
     <a href="004.jpg" data-ngid="84" data-ngalbumid="3" data-ngThumb="004.jpg"> Siran & Abi </a>
     <a href="005.jpg" data-ngid="85" data-ngalbumid="3" data-ngThumb="005.jpg"> Siran & Abi </a>
     <a href="006.jpg" data-ngid="86" data-ngalbumid="3" data-ngThumb="006.jpg"> Siran & Abi </a> -->
-    
   </div> 
-<div id="invialbum" class="invialbum" data-nanogallery2='{
-          "thumbnailHeight":  180,
-          "thumbnailWidth":   270,
-          "thumbnailHoverEffect2": "imageGrayOff|scale120|imageSepiaOn",
-          "itemsBaseURL":     "http://siranwedsabi.appspot.com/static/imgs/albums/"
-        }' >    
-
-     <a href="finvif.jpg" data-ngid="1" data-ngThumb="finvif.jpg"> Friends Invite - Front </a>
-     <a href="finvib.jpg" data-ngid="2" data-ngThumb="finvib.jpg"> Friends Invite - Back </a>
-    
-  </div> 
-<div class="cmnhf fotter" id="cd"> </div>
+  <div id="tourr" class="hdiv tourr"> <br />  <br /> 
+  <span id="gmbtn0" class="tmbtn" style="background-image: url('static/imgs/nellaiappar.jpg')" onclick="loadtmap(0)"> Nellaiappr Kovil </span> &nbsp;
+  <span id="gmbtn1" class="tmbtn" style="background-image: url('static/imgs/courtallam.jpg')" onclick="loadtmap(1)"> Courtallam </span> &nbsp;
+  <span id="gmbtn2" class="tmbtn" style="background-image: url('static/imgs/papanasam.jpg')" onclick="loadtmap(2)"> Papanasam </span> &nbsp;
+   <br /> <br /><br /> 
+   <div class="tdesc" id="tdesc"> <h3> Tourist Attractions in and around Tirunelveli </h3>  </div>
+   </div>
+  <div id="tourl" class="hdiv tourl"> <br /><br /><iframe
+    id="tmap" class="tmap"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg
+      &q=Tirunelveli+Tamil Nadu+India" allowfullscreen>
+  </iframe> </div>
+  <div class="cmnhf fotter" id="fotter"> <div id="cd"> </div><div class="meta"> Site best viewed in Modern Browsers. Designed by Dinesh Arun. Feedback and Suggestions welcome at dnsh.arun@gmail.com </div></div>
 </body>
 </html>
