@@ -8,7 +8,8 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .blockIE {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #121212; opacity: 0.96; display: none; z-index: 300; color: red; font-weight: bold; text-align: center; font-size: 240%; }
 .cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); opacity: 0.72; }
 .header {position: fixed; top: -90%; left: -1px; right: -2px; bottom: 88%; border: 2px double black; border-top: 0px; border-radius: 0px 0px 200% 200%;  }
-.fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; }
+.fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; padding-top: 1%; }
+.cdtime {font-family: VT323; font-size: 150%; }
 .topnavibtn { position: fixed; left: 47.6%; width: 4.8%; height: auto; bottom: 90%; border: 2px solid #333333; border-radius: 50%; padding: 0px; margin: 0px; padding-top: 4.8%; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); overflow: hidden; z-index: 200; background-color: #cccccc; }
 .topnavibtn:hover {cursor: pointer; border: 3px solid black; }
 .topnavibtnl1 {left: 48%; width: 4%; padding-top: 4%; margin-left: 8%; margin-bottom: 0.8%; }
@@ -16,7 +17,7 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .topnavibtnr1 {left: 48%; width: 4%; padding-top: 4%; margin-left: -8%; margin-bottom: 0.8%; }
 .topnavibtnr2 {left: 48.4%; width: 3.2%; padding-top: 3.2%; margin-left: -15%; margin-bottom: 2%; }
 .topnaviicon {position: absolute; top: 0px; left: 0px; width: 99%; padding:0px; margin: 0px; border: 0px; }
-.hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120);}
+.hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120); font-family: Macondo;}
 .gmap {z-index: 90; opacity: 1; width: 90%; height: 84%; border-radius: 3%; margin-right: 6%; } 
 .gmbtn {z-index: 93; width: 12%; height: 6%; font-size: 81%; margin: 1%; padding: 3px; border: 1px solid black; border-radius: 3%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); }
 .gmbtn:hover {cursor: pointer; border: 2px solid black; background-color: #c9c9c9; box-shadow: 1px 1px 3px rgba(12, 12, 12, 120); }
@@ -24,25 +25,26 @@ body { font-family: Ubuntu; font-size: 12px; background-color: #f0f0f0; color: b
 .brideintro {animation-name: brideintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes brideexit { from {right: 12%;} to {right: -50%;} }
 .brideexit {animation-name: brideexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.bride{position: fixed; right: -50%; top: 15%; width: 37.8%; height: 39%;  border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
+.bride{position: fixed; right: -50%; top: 15%; width: 37.8%; height: 33%;  border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
 @keyframes groomintro { from {left: -50%;} to {left: 12%;} }
 .groomintro {animation-name: groomintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes groomexit { from {left: 12%;} to {left: -50%;} }
 .groomexit {animation-name: groomexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.groom{position: fixed; left: -50%; top: 15%; width: 37.8%; height: 39%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
-.bridedata { width: 96%; height: 96%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 2%; }
-.groomdata { width: 96%; height: 96%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 2%; }
+.groom{position: fixed; left: -50%; top: 15%; width: 37.8%; height: 33%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
+.bridedata { width: 91%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 3%; padding-left: 3%; }
+.groomdata { width: 91%; height: 94%;  border: 0px; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 3%; padding-right: 3%; }
 .brideimg {position: absolute; width: 42%; height: auto; right: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .brideimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
 .groomimg {position: absolute; width: 45%; height: auto; left: 0px; bottom: 0px; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .groomimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
-@keyframes inviintro { from {top: 180%;} to {top: 57%;} }
+.cplName {font-family: 'Lobster Two'; font-size: 360%; color: #333300; text-shadow: 1px 1px 6px black; }
+@keyframes inviintro { from {top: 180%;} to {top: 51%;} }
 .inviintro { animation-name: inviintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes inviexit { from {top: 57%;} to {top: 180%;} }
+@keyframes inviexit { from {top: 51%;} to {top: 180%;} }
 .inviexit { animation-name: inviexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .homebannerl {position: fixed; top: -6%; left: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
 .homebannerr {position: fixed; top: -6%; right: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
-.homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 45%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white;}
+.homeinvi{position: fixed; left: 9%; top: 180%; width: 81%; height: 54%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-family: 'Merienda One'; font-size: 180%; font-weight: bold; text-shadow: 0px 0px 0px black;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
 @keyframes gbintro { from {top: 120%;} to {top: 30%;} }
