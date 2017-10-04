@@ -10,17 +10,16 @@ function onLoadActions() {
     $("#blockIE").css('display', 'block');
   }
   
+  resizeMe();
   registerForms();
-  preloadImages('static/imgs/albums/001.jpg',
-                'static/imgs/albums/002.jpg',
-                'static/imgs/albums/003.jpg',
-                'static/imgs/albums/004.jpg',
-                'static/imgs/albums/005.jpg',
-                'static/imgs/albums/006.jpg');
-  setTimeout(function() { navTo(0, 0); }, 900);
+  preloadImages('static/imgs/albums/e01.jpg',
+                'static/imgs/albums/e02.jpg',
+                'static/imgs/albums/finvif.jpg',
+                'static/imgs/albums/finvib.jpg');
   fillGuestBook();
-  jQuery('.scrollbar-chrome').scrollbar();
   startCountDown();
+  jQuery('.scrollbar-chrome').scrollbar();
+  setTimeout(function() { navTo(0, 0); }, 900);
 }
 
 function getInternetExplorerVersion() {
@@ -52,8 +51,10 @@ function navTo(entry, pgid) {
             break;
 
           case 1:
-            $("#invialbum").removeClass('inviaintro');
-            $("#invialbum").addClass('inviaexit');
+            $("#tourr").removeClass('tourrintro');
+            $("#tourr").addClass('tourrexit');
+            $("#tourl").removeClass('tourlintro');
+            $("#tourl").addClass('tourlexit');
             break;
             
           case 2:
@@ -97,8 +98,10 @@ function navTo(entry, pgid) {
           break;
        
         case 1:
-          $("#invialbum").removeClass('inviaexit');
-          $("#invialbum").addClass('inviaintro');
+          $("#tourr").removeClass('tourrexit');
+          $("#tourr").addClass('tourrintro');
+          $("#tourl").removeClass('tourlexit');
+          $("#tourl").addClass('tourlintro');
           break;
      
         case 2:
@@ -130,6 +133,26 @@ function navTo(entry, pgid) {
   }
 }
 
+function loadtmap(id) {
+  if(id == 0) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &q=Arulmigu+Nellaiappar+Temple,+East+Car+Street,+Tirunelveli,+Tamil+Nadu,+India');
+    document.getElementById("tdesc").innerHTML = " <h3> Arulmigu Nellaiappar Temple </h3>";
+  } else if(id == 1) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &q=Courtallam+Tirunelveli,+Tamil+Nadu,+India');
+    document.getElementById("tdesc").innerHTML = " <h3> Courtallam </h3>";
+  } else if(id == 2) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &q=Papanasam+Tirunelveli,+Tamil+Nadu,+India');
+    document.getElementById("tdesc").innerHTML = " <h3> Papanasam </h3>";
+  } else {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &q=Tirunelveli,+Tamil+Nadu,+India');
+    document.getElementById("tdesc").innerHTML = " <h3> Tourist Attractions in and around Tirunelveli </h3>";
+  }
+}
+
 function loadgmap(id) {
   if(id == 2)
     $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
@@ -142,6 +165,21 @@ function loadgmap(id) {
   else
     $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
     &q=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+}
+
+function resizeMe() {
+    //Standard height, for which the body font size is correct
+    var preferredHeight = 720; 
+    var preferredWidth = 1366; 
+    var fontsize = 10;
+
+    var displayHeight = $(window).height();
+    var displayWidth = $(window).width();
+    var percentageH = ((0.96 * displayHeight) / preferredHeight);
+    var percentageW = ((0.96 * displayWidth) / preferredWidth);
+    var percentage  = ((percentageH > percentageW)?(percentageW):(percentageH))
+    var newFontSize = Math.floor(fontsize * percentage);
+    $("body").css("font-size", newFontSize);
 }
 
 function removeVal(id) {
@@ -190,9 +228,6 @@ function registerForms() {
       var l = document.getElementById("gmsg"); if(l) {l.value = " Enter Your Wishes in Our Guestbook... "};		
    
       posting.done(function( data ) {
-        /*$("#gbinner").prepend('<div class="cmt cmt' + (lastCmtId%2) + '" id="gC' + (lastCmtId) + '"><div class="cmtNo">(' + (lastCmtId++) + ')</div>' 
-                      + data[0].Post + '<div class="cmtName">' 
-                      + data[0].Name + ' </div> <div class="cmtDate"> ' + data[0].CreatedTime + ' </div></div>');*/
         fillGuestBook();                      
       });
     }
@@ -265,11 +300,11 @@ function startCountDown() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   if (distance < 0) {
-    document.getElementById("cd").innerHTML = "<span class='cdtime'> Happily Married for " + days + "days, " + hours + "hours, "
-    + minutes + "minutes & " + seconds + "seconds";
+    document.getElementById("cd").innerHTML = "<span class='cdtime'> <span class='cdnum'>" + days + "</span> days, <span class='cdnum'>" + hours + "</span> hours, <span class='cdnum'>"
+    + minutes + "</span> minutes & <span class='cdnum'>" + seconds + "</span> seconds Since Marriage </span>";
   } else {
-    document.getElementById("cd").innerHTML = "<span class='cdtime'>" + days + "days, " + hours + "hours, "
-    + minutes + "minutes & " + seconds + "seconds - Left to tie the knot </span>";
+    document.getElementById("cd").innerHTML = "<span class='cdtime'><span class='cdnum'>" + days + "</span> days, <span class='cdnum'>" + hours + "</span> hours, <span class='cdnum'>"
+    + minutes + "</span> minutes & <span class='cdnum'>" + seconds + "</span> seconds To Go! </span>";
   }
 }, 1000);
 }
