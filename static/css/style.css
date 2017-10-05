@@ -1,6 +1,6 @@
 body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: black; margin: 0px; padding: 0px; border: 0px; overflow: hidden; }
 .screen{position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px; background-color: black; z-index: -1;}
-.bodyDiv {position: relative; left: 0px; top: 0px; width: 98%; border: 3px solid white; margin: 1%; padding: 0px;  z-index: 0; padding-top: 56.25%; }
+.bodyDiv {position: relative; left: 0px; top: 0px; width: 98%; border: 3px solid white; margin: 1% auto; padding: 0px;  z-index: 0; padding-top: 56.25%; }
 .bodyInner{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px;  z-index: -2; overflow: hidden; }
 @media screen and (min-aspect-ratio: 16/9) { .bodyDiv{width: 90%; padding-top: 48%;} }
 @media screen and (min-aspect-ratio: 22/10) { .bodyDiv{width: 80%; padding-top: 39%;} }
