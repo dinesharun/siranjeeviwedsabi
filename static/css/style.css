@@ -1,27 +1,36 @@
-body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: black;}
-.bg { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
-.bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18;}
-.bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09;}
+body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: black; margin: 0px; padding: 0px; border: 0px; overflow: hidden; }
+.screen{position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px; background-color: black; z-index: -1;}
+.bodyDiv {position: relative; left: 0px; top: 0px; width: 98%; border: 3px solid white; margin: 1%; padding: 0px;  z-index: 0; padding-top: 56.25%; }
+.bodyInner{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px;  z-index: -2; overflow: hidden; }
+@media screen and (min-aspect-ratio: 16/9) { .bodyDiv{width: 90%; padding-top: 48%;} }
+@media screen and (min-aspect-ratio: 22/10) { .bodyDiv{width: 80%; padding-top: 39%;} }
+@media screen and (min-aspect-ratio: 28/11) { .bodyDiv{width: 70%; padding-top: 30%;} }
+@media screen and (min-aspect-ratio: 34/12) { .bodyDiv{width: 60%; padding-top: 24%;} }
+@media screen and (min-aspect-ratio: 40/13) { .bodyDiv{width: 50%; padding-top: 18%;} }
+@media screen and (min-aspect-ratio: 46/14) { .bodyDiv{width: 40%; padding-top: 12%;} }
+.bg { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; height: auto; background-size: 100% 100%; z-index: 3; }
+.bg1 {background-image: url("../imgs/bg1.jpg"); opacity: 0.18; z-index: -1;}
+.bg2 {background-image: url("../imgs/bg2.jpg"); opacity: 0.09; z-index: -1;}
 .firstWord {color:darkred; font-size:360%; font-family: 'Miss Fajardose';}
 .secondWord {color:red; font-size:270%; font-family: 'Miss Fajardose';}
 @keyframes loaded { from {opacity: 0.93;} to {opacity: 0.03;} }
 .loaded {animation-name: loaded; animation-duration: 2s; animation-fill-mode: forwards;}
-.loader {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #363636; opacity: 0.93; display: block; z-index: 300; color: #cccccf; font-weight: bold; text-align: center; font-size: 180%; padding: 18%; }
-.blockIE {position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #121212; opacity: 0.96; display: none; z-index: 300; color: red; font-weight: bold; text-align: center; font-size: 240%; }
+.loader {position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #363636; opacity: 0.93; display: block; z-index: 300; color: #cccccf; font-weight: bold; text-align: center; font-size: 180%; padding: 18%; }
+.blockIE {position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: #121212; opacity: 0.96; display: none; z-index: 300; color: red; font-weight: bold; text-align: center; font-size: 240%; }
 .cmnhf {padding: 0px; margin: 0px; box-shadow: 3px 0px 18px rgba(30, 30, 30, 120); background-color: #f9f9f9; z-index: 100; background-image: url("../imgs/hf.jpg"); opacity: 0.72; }
-.header {position: fixed; top: -90%; left: -1px; right: -2px; bottom: 88%; border: 2px double black; border-top: 0px; border-radius: 0px 0px 200% 200%;  }
-.fotter {position: fixed; top: 94%; left: -1px; right: -2px; bottom: -30%; border: 2px double black; border-bottom: 0px;  border-radius: 33% 33% 0px 0px; text-align: center; font-size: 180%; padding-top: 3px; }
+.header {position: absolute; top: 0px; left: 18%; right: 18%; bottom: 88%; border: 2px double black; border-top: 0px; border-radius: 0px 0px 200% 200%;  }
+.fotter {position: absolute; top: 93%; left: 18%; right: 18%; bottom: 1px; border: 2px double black; border-bottom: 0px;  border-radius: 69% 69% 0px 0px; text-align: center; font-size: 180%; padding-top: 3px; }
 .meta {font-size: 45%; color: dark-gray; }
 .cdtime {font-family: VT323; font-size: 138%; color: brown; }
 .cdnum {font-size: 111%; color: blue;}
-.topnavibtn { position: fixed; left: 47.6%; width: 4.8%; height: auto; bottom: 90%; border: 2px solid #333333; border-radius: 50%; padding: 0px; margin: 0px; padding-top: 4.8%; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); overflow: hidden; z-index: 200; background-color: #cccccc; }
+.topnavibtn { position: absolute; left: 47.6%; width: 4.8%; height: auto; bottom: 90%; border: 2px solid #333333; border-radius: 50%; padding: 0px; margin: 0px; padding-top: 4.8%; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); overflow: hidden; z-index: 200; background-color: #cccccc; }
 .topnavibtn:hover {cursor: pointer; border: 3px solid black; }
 .topnavibtnl1 {left: 48%; width: 4%; padding-top: 4%; margin-left: 8%; margin-bottom: 0.8%; }
 .topnavibtnl2 {left: 48.4%; width: 3.2%; padding-top: 3.2%; margin-left: 15%; margin-bottom: 2%; }
 .topnavibtnr1 {left: 48%; width: 4%; padding-top: 4%; margin-left: -8%; margin-bottom: 0.8%; }
 .topnavibtnr2 {left: 48.4%; width: 3.2%; padding-top: 3.2%; margin-left: -15%; margin-bottom: 2%; }
 .topnaviicon {position: absolute; top: 0px; left: 0px; width: 99%; padding:0px; margin: 0px; border: 0px; }
-.hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120); font-family: Macondo;}
+.hdiv {z-index: 2; background-image: url("../imgs/dbg.jpg"); box-shadow: 0px 0px 2px rgba(0, 0, 0, 120); font-family: Macondo; opacity: 0.81%;}
 .gmap {z-index: 90; opacity: 1; width: 90%; height: 84%; border-radius: 3%; margin-right: 6%; } 
 .tmap {z-index: 90; opacity: 1; width: 81%; height: 84%; border-radius: 3%; margin-left: 3%; } 
 .gmbtn {z-index: 93; width: 12%; height: 6%; font-size: 81%; margin: 1%; padding: 3px; border: 1px solid black; border-radius: 3%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); }
@@ -32,14 +41,14 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .brideintro {animation-name: brideintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes brideexit { from {right: 9%;} to {right: -50%;} }
 .brideexit {animation-name: brideexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.bride{position: fixed; right: -50%; top: 15%; width: 40.8%; height: 33%;  border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
+.bride{position: absolute; right: -50%; top: 15%; width: 40.8%; height: 33%;  border: 2px double black; border-radius: 0px 100% 10% 3%; text-align: left;}
 @keyframes groomintro { from {left: -50%;} to {left: 9%;} }
 .groomintro {animation-name: groomintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes groomexit { from {left: 9%;} to {left: -50%;} }
 .groomexit {animation-name: groomexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.groom{position: fixed; left: -50%; top: 15%; width: 40.8%; height: 33%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
-.bridedata { width: 96%; height: 94%;  border: 0px; font-size: 450%; font-weight: bold; font-family: 'Miss Fajardose'; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
-.groomdata { width: 96%; height: 94%;  border: 0px; font-size: 450%; font-weight: bold; font-family: 'Miss Fajardose'; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; margin: 1%; padding: 1%; }
+.groom{position: absolute; left: -50%; top: 15%; width: 40.8%; height: 33%; border: 2px double black; border-radius: 100% 0px 3% 10%; text-align: right;}
+.bridedata { width: 96%; height: 94%;  border: 0px; font-size: 450%; font-family: 'Devonshire'; text-shadow: 1px 1px 0px #000000; margin: 1%; padding: 1%; }
+.groomdata { width: 96%; height: 94%;  border: 0px; font-size: 450%; font-family: 'Devonshire'; text-shadow: 1px 1px 0px #000000; margin: 1%; padding: 1%; }
 .brideimg {position: absolute; width: 39%; height: auto; left: 72%; bottom: 0%; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
 .brideimg:hover {-webkit-filter: sepia(3%); filter: sepia(3%);}
 .groomimg {position: absolute; width: 39%; height: auto; right: 72%; bottom: 0%; -webkit-filter: sepia(96%); filter: sepia(96%);  z-index: 30;}
@@ -47,26 +56,28 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .cplName {position: absolute; bottom: 30%; font-family: 'Lobster Two'; font-size: 150%; color: #333300; color: lightblue; text-shadow: 1px 1px 1px rgb(0, 0, 0), -1px -1px 1px black, 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px black, 1px 1px 3px rgb(0, 0, 0), -1px -1px 3px black; z-index: 45; }
 .cplbride {left: 9%;}
 .cplgroom{right: 9%;}
-@keyframes inviintro { from {top: 180%;} to {top: 51%;} }
+@keyframes inviintro { from {top: 150%;} to {top: 51%;} }
 .inviintro { animation-name: inviintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes inviexit { from {top: 51%;} to {top: 180%;} }
+@keyframes inviexit { from {top: 51%;} to {top: 150%;} }
 .inviexit { animation-name: inviexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.homebannerl {position: fixed; top: -6%; left: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
-.homebannerr {position: fixed; top: -6%; right: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
-.homeinvi{position: fixed; left: 9%; top: 180%; width: 75%; height: 54%; padding: 3%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-family: 'Merienda One'; font-size: 150%; font-weight: bold; text-shadow: 0px 0px 0px black;}
+.homebannerl {position: absolute; top: -6%; left: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
+.homebannerr {position: absolute; top: -6%; right: 1%; width: 15%; height: 27%; z-index: 30; border: 0px dotted black;}
+.homeinvi{position: absolute; left: 9%; top: 150%; width: 75%; height: 43%;  padding: 3%; border: 2px double black; border-radius: 33% 33% 0px 0px; text-align: center; font-family: 'Merienda One'; font-size: 150%; font-weight: bold; text-shadow: 0px 0px 0px black;}
+.inviLink {text-decoration: underline;}
+.inviLink:hover {cursor: pointer; font-weight: bold; font-size: 105%;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
-@keyframes gbintro { from {top: 120%;} to {top: 30%;} }
+@keyframes gbintro { from {top: 150%; } to {top: 30%; } }
 .gbintro { animation-name: gbintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes gbexit { from {top: 30%;} to {top: 120%;} }
+@keyframes gbexit { from {top: 30%; } to {top: 150%; } }
 .gbexit { animation-name: gbexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.guestbook{position: fixed; left: 9%; top: 120%; width: 81%; height: 72%; border: 2px double black; border-radius: 12% 12% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; overflow: hidden; overflow: hidden; opacity: 0.72; z-index: 10;}
+.guestbook{position: absolute; left: 9%; top: 150%; height: 72%; width: 81%; border: 2px double black; border-radius: 12% 12% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; overflow: hidden; overflow: hidden; opacity: 0.72; z-index: 10;}
 .gbinner {position: absolute; top: 9%; left: 0px; width: 100%; height: 99%; margin: 0px; padding: 0px; border: 0px; overflow: hidden; overflow-y: scroll;}
 @keyframes gbfintro { from {top: -30%;} to {top: 15%;} }
 .gbfintro { animation-name: gbfintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes gbfexit { from {top: 15%;} to {top: -30%;} }
 .gbfexit { animation-name: gbfexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.guestbookform{position: fixed; left: 3%; top: -30%; width: 93%; height: 11%; border: 0px; border-radius: 3%; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; opacity: 0.72; z-index: 10; overflow: hidden; padding: 0.5%; background-image: url(''); box-shadow: 0px 0px 0px; }
+.guestbookform{position: absolute; left: 3%; top: -30%; width: 93%; height: 11%; border: 0px; border-radius: 3%; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; opacity: 0.72; z-index: 10; overflow: hidden; padding: 0.5%; background-image: url(''); box-shadow: 0px 0px 0px; }
 .gfele {border-radius: 9%; border: 1px dotted black; text-align: center; color: #545454; font-weight: bold; font-size: 96%; }
 .gname {position: absolute; right: 1%; top: 3%; width: 24%; height: 21%; z-index: 93;}
 .gemail {position: absolute; right: 1%; top: 33%; width: 24%; height: 21%; z-index: 93;}
@@ -77,27 +88,27 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .ngintro { animation-name: ngintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes ngexit { from {left: 9%;} to {left: 120%;} }
 .ngexit { animation-name: ngexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.nanogallery{position: fixed; left: 120%; top: 21%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
-@keyframes inforintro { from {left: 120%;} to {left: 39%;} }
+.nanogallery{position: absolute; left: 120%; top: 21%; width: 81%; height: 18%; border: 0px double black; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; z-index: 10;}
+@keyframes inforintro { from {left: 150%;} to {left: 39%;} }
 .inforintro { animation-name: inforintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes inforexit { from {left: 39%;} to {left: 120%;} }
+@keyframes inforexit { from {left: 39%;} to {left: 150%;} }
 .inforexit { animation-name: inforexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.infor{position: fixed; left: 120%; top: 15%; width: 66%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
+.infor{position: absolute; left: 150%; top: 15%; width: 66%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
 @keyframes infolintro { from {left: -45%;} to {left: -3%;} }
 .infolintro { animation-name: infolintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes infolexit { from {left: -3%;} to {left: -45%;} }
 .infolexit { animation-name: infolexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.infol{position: fixed; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
-@keyframes tourrintro { from {left: 120%;} to {left: 45%;} }
+.infol{position: absolute; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
+@keyframes tourrintro { from {left: 150%;} to {left: 45%;} }
 .tourrintro { animation-name: tourrintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes tourrexit { from {left: 45%;} to {left: 120%;} }
+@keyframes tourrexit { from {left: 45%;} to {left: 150%;} }
 .tourrexit { animation-name: tourrexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.tourr{position: fixed; left: 120%; top: 15%; width: 55.5%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
-@keyframes tourlintro { from {left: -45%;} to {left: -3%;} }
+.tourr{position: absolute; left: 150%; top: 15%; width: 55.5%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
+@keyframes tourlintro { from {left: -55%;} to {left: -3%;} }
 .tourlintro { animation-name: tourlintro; animation-duration: 2s; animation-fill-mode: forwards;}
-@keyframes tourlexit { from {left: -3%;} to {left: -45%;} }
+@keyframes tourlexit { from {left: -3%;} to {left: -55%;} }
 .tourlexit { animation-name: tourlexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.tourl{position: fixed; left: -45%; top: 15%; width: 45%; height: 69%; border: 2px double black; border-radius: 0px 3% 3% 0px; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10;}
+.tourl{position: absolute; left: -55%; top: 15%; width: 45%; height: 69%; border: 2px double black; border-radius: 0px 3% 3% 0px; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10;}
 .cmtLoading{margin-top:1%;padding-left:42%;padding-right:42%;text-align:center;}
 .cmtList{overflow:auto;height:78%;text-shadow:0px 1px #000000;}		  
 .cmt{border: 1px dotted #111111;padding:0.6%;margin:0px;margin-top:1%;border-radius:9% 9% 9% 9%;-moz-border-radius:9% 9% 9% 9%;
