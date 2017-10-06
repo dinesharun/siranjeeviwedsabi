@@ -1,6 +1,14 @@
-body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: black; margin: 0px; padding: 0px; border: 0px; overflow: hidden; }
+body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: black; margin: 0px; padding: 0px; border: 0px; overflow: hidden;}
+table { border-collapse: collapse; border: 1px dotted black; font-size: 81%; font-family: Macondo;}
+td{border: 1px dotted black;}
+td:nth-child(odd){background-color: #e4e4e4;}
+td:nth-child(even){background-color: #d5d5d5;}
+tr{border: 1px dotted black;}
+h2 {font-family: 'Macondo'; font-size: 120%; font-weight: bold;}
+h3 {font-family: 'Macondo'; font-size: 111%; font-weight: bold;}
+h4 {font-family: 'Macondo'; font-size: 105%; font-weight: bold;}
 .screen{position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px; background-color: black; z-index: -1;}
-.bodyDiv {position: relative; left: 0px; top: 0px; width: 98%; border: 3px solid white; margin: 1% auto; padding: 0px;  z-index: 0; padding-top: 56.25%; }
+.bodyDiv {position: relative; left: 0px; top: 0px; width: 98%; border: 3px solid white; margin: 1% auto; padding: 0px;  z-index: 0; padding-top: 56.25%;}
 .bodyInner{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px;  z-index: -2; overflow: hidden; }
 @media screen and (min-aspect-ratio: 16/9) { .bodyDiv{width: 90%; padding-top: 48%;} }
 @media screen and (min-aspect-ratio: 22/10) { .bodyDiv{width: 80%; padding-top: 39%;} }
@@ -35,7 +43,7 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .tmap {z-index: 90; opacity: 1; width: 81%; height: 84%; border-radius: 3%; margin-left: 3%; } 
 .gmbtn {z-index: 93; width: 12%; height: 6%; font-size: 81%; margin: 1%; padding: 3px; border: 1px solid black; border-radius: 3%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); }
 .gmbtn:hover {cursor: pointer; border: 2px solid black; background-color: #c9c9c9; box-shadow: 1px 1px 3px rgba(12, 12, 12, 120); }
-.tmbtn {z-index: 93; width: 12%; height: auto; font-size: 81%; margin: 0px; padding: 3%; border: 1px solid black; border-radius: 50%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); text-shadow: 1px 1px 9px black, -1px -1px 9px black, 2px 2px 9px black, -2px -2px 9px black; color: white; font-weight: bold; background-size: 100% 100%; }
+.tmbtn {position: absolute; top: 3%; left: 3%; z-index: 93; width: 12%; height: auto; font-size: 105%; margin: 0px; padding: 0px; padding-top: 12%; border: 1px solid black; border-radius: 50%; background-color: #f9f9f9; box-shadow: 0px 0px 3px rgba(30, 30, 30, 120); text-shadow: 1px 1px 9px black, -1px -1px 9px black, 2px 2px 9px black, -2px -2px 9px black; color: white; font-weight: bold; background-size: 100% 100%; }
 .tmbtn:hover {cursor: pointer; border: 2px solid black; background-color: #c9c9c9; box-shadow: 1px 1px 3px rgba(12, 12, 12, 120); }
 @keyframes brideintro { from {right: -50%;} to {right: 9%;} }
 .brideintro {animation-name: brideintro; animation-duration: 2s; animation-fill-mode: forwards;}
@@ -93,22 +101,27 @@ body { font-family: Ubuntu; font-size: 10px; background-color: #f0f0f0; color: b
 .inforintro { animation-name: inforintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes inforexit { from {left: 39%;} to {left: 150%;} }
 .inforexit { animation-name: inforexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.infor{position: absolute; left: 150%; top: 15%; width: 66%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
+.infor{position: absolute; left: 150%; top: 15%; width: 66%; height: 72%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; overflow: hidden;}
 @keyframes infolintro { from {left: -45%;} to {left: -3%;} }
 .infolintro { animation-name: infolintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes infolexit { from {left: -3%;} to {left: -45%;} }
 .infolexit { animation-name: infolexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.infol{position: absolute; left: -45%; top: 15%; width: 36%; height: 69%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
+.infol{position: absolute; left: -45%; top: 15%; width: 36%; height: 72%; border: 2px double black; border-radius: 0px 18% 18% 0px; text-align: center; font-size: 180%; font-weight: bold;}
+.clock {border: 0px; font-size: 153%; font-weight: bold; color: brown; font-family: 'Fredericka the Great'; }
+.clockdigit {position: relative; border-radius: 9%; border: 2px solid black; background-color: lightgray; z-index: 33; }
+.clockfaceup {position: absolute; left: 0px; right: 0px; width: 100%; height: 50%; background-color: #393939; background: linear-gradient(#121212, #454545); opacity: 0.72; z-index: 36;}
+.clockfacedown {position: absolute; left: 0px; bottom: 0px; width: 100%; height: 50%; background-color: #909090;  background: linear-gradient(#545454, #a2a2a2); opacity: 0.72; z-index: 36;}
 @keyframes tourrintro { from {left: 150%;} to {left: 45%;} }
 .tourrintro { animation-name: tourrintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes tourrexit { from {left: 45%;} to {left: 150%;} }
 .tourrexit { animation-name: tourrexit; animation-duration: 2s; animation-fill-mode: forwards;}
-.tourr{position: absolute; left: 150%; top: 15%; width: 55.5%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10; overflow: hidden;}
+.tourr{position: absolute; left: 150%; top: 15%; width: 55.5%; height: 69%; border: 2px double black; border-radius: 6% 0px 0px 6%; text-align: center; font-size: 180%; opacity: 0.72; z-index: 10; overflow: hidden; font-size: 150%; text-shadow: 1px 1px 1px white;}
 @keyframes tourlintro { from {left: -55%;} to {left: -3%;} }
 .tourlintro { animation-name: tourlintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes tourlexit { from {left: -3%;} to {left: -55%;} }
 .tourlexit { animation-name: tourlexit; animation-duration: 2s; animation-fill-mode: forwards;}
 .tourl{position: absolute; left: -55%; top: 15%; width: 45%; height: 69%; border: 2px double black; border-radius: 0px 3% 3% 0px; text-align: center; font-size: 180%; font-weight: bold; opacity: 0.72; z-index: 10;}
+.tdesc {position: absolute; top: 54%; left: 3%; width: 91%; padding: 1.5%; margin: 0px; border: 0px; }
 .cmtLoading{margin-top:1%;padding-left:42%;padding-right:42%;text-align:center;}
 .cmtList{overflow:auto;height:78%;text-shadow:0px 1px #000000;}		  
 .cmt{border: 1px dotted #111111;padding:0.6%;margin:0px;margin-top:1%;border-radius:9% 9% 9% 9%;-moz-border-radius:9% 9% 9% 9%;
