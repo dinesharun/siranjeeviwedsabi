@@ -12,8 +12,19 @@ function onLoadActions() {
   
   resizeMe();
   registerForms();
-  preloadImages('static/imgs/albums/e01.jpg',
-                'static/imgs/albums/e02.jpg',
+  preloadImages('static/imgs/albums/te01.jpg',
+                'static/imgs/albums/te02.jpg',
+                'static/imgs/albums/te03.jpg',
+                'static/imgs/albums/te04.jpg',
+                'static/imgs/albums/te05.jpg',
+                'static/imgs/albums/te06.jpg',
+                'static/imgs/albums/te07.jpg',
+                'static/imgs/albums/te08.jpg',
+                'static/imgs/albums/te09.jpg',
+                'static/imgs/albums/finvi1.jpg',
+                'static/imgs/albums/finvi2.jpg',
+                'static/imgs/albums/finvi3.jpg',
+                'static/imgs/albums/finvi4.jpg',
                 'static/imgs/albums/finvif.jpg',
                 'static/imgs/albums/finvib.jpg');
   fillGuestBook();
@@ -79,9 +90,10 @@ function navTo(entry, pgid) {
           default:
             break;
         }
-        
         setTimeout(function () { navTo(1, pgid); }, 900);
       } else {
+        loadgmap(0);
+        loadtmap(10);
         $("#loader").addClass('loaded');
         setTimeout(function () { $("#loader").css('display', 'none'); }, 1800);
         setTimeout(function () { navTo(1, pgid); }, 10);
@@ -135,21 +147,46 @@ function navTo(entry, pgid) {
 
 function loadtmap(id) {
   if(id == 0) {
-    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
-    &q=Arulmigu+Nellaiappar+Temple,+East+Car+Street,+Tirunelveli,+Tamil+Nadu,+India');
-    document.getElementById("tdesc").innerHTML = " <h3> Arulmigu Nellaiappar Temple </h3>";
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Arulmigu+Nellaiappar+Temple,+East+Car+Street,+Tirunelveli,+Tamil+Nadu,+India&zoom=12');
+    document.getElementById("tdesc").innerHTML = " <h3> Arulmigu Nellaiappar Temple </h3> The temple of Nellaiappar and Kanthimathi is situated in the centre of the town. The very name of the town,  Tirunelveli which was known in the past as Then Pandyanagaram is a part of the town which has developed around the temple of Nellaiyappar. From a distance itself one can have a beautiful view of the  the rules laid down in the agamasastras by Rama Pandyan.";
   } else if(id == 1) {
-    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
-    &q=Courtallam+Tirunelveli,+Tamil+Nadu,+India');
-    document.getElementById("tdesc").innerHTML = " <h3> Courtallam </h3>";
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Main+Falls+Courtallam+Tirunelveli,+Tamil+Nadu,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Courtallam Falls </h3> Kuttralam or Kuttalam or Courtallam, is situated on the Western Ghats in Tirunelveli. Many seasonal and few perennial rivers such as the Chittar River, the Manimuthar River, the Pachaiyar River and the Thamirabarani River originate in this region. The numerous waterfalls and cascades along with the ubiquitous health resorts in the area have earned it the title the Spa of South India. The falls carry a good amount of water only when there is a rain on the hills. Season begins from June of every year till September. The South West Monsoon brings in the cold breeze with mild temperature. From October to December North East Monsoon sets over in Tamil Nadu and the climate is cold and the rains are very heavy sometimes.Nestled in the Western Ghats, Courtallam has scenic surroundings. The hillocks which dominate the scenery disappear into the blue mist of Agasthiarmalai, the mountain bearing the name of a sage who made immense contributions to Tamil literature and is believed to have lived in the area.";
   } else if(id == 2) {
-    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
-    &q=Papanasam+Tirunelveli,+Tamil+Nadu,+India');
-    document.getElementById("tdesc").innerHTML = " <h3> Papanasam </h3>";
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Agasthiyar+Falls+Papanasam+Tirunelveli,+Tamil+Nadu,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Papanasam Agasthiyar Falls </h3> Agasthiyar Falls is located in Western Ghats to the South of Papanasam town and to the north of Papanasam Lower, the first lake in the descent of Tamiraparani River. It is located 42 km from the nearest city Tirunelveli. The waters from the falls meanders the stream in the river to Papansam hydro electric project and reaches the catchment area to the Papanasam Dam, which has a storage capacity of 142.15 ft. The place is frequented by animals like Tiger and Panther, which are frequently spotted in the route from Agasthiyar Falls to Papansam as both are located close to Kalakkad Mundanthurai Tiger Reserve. The falls receives its waters during the South-west monsoon from May to September, but the maximum amount of rainfall is received during the North-east monsoon during October to December.But the falls is commonly said by the nearby locales as 365 days falls as people can go there any day because the water is from the dam hence the water flow will not be affected by the monsoon to a large extent. There is a small temple of Agasthiyar near the falls, where devotees worship after taking a holy dip in the falls.";
+  } else if(id == 3) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Maanjolai+Tirunelveli,+Tamil+Nadu,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Maanjolai </h3> Manjolai Hills is a lovely hill station tucked away deep in the magnificent Kalakad Mundanthurai Tiger Reserve in the Western Ghats. The hills rise to a height of 1000-1500 meters and are covered here with tranquil tea gardens. Manjolai Hills is above the Manimuthar Dam and the picturesque Manimuthar Waterfalls and is 70 Kms from Tirunelveli. Manjolai Hills is famed for its lovely weather, which is such a blessing after the searing heat of the plains. It is also known for its awesome scenic beauty and the serenity of its surroundings";
+  } else if(id == 4) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Koonthakulam+Bird+Sanctuary,+Koonthakulam,+Tamil+Nadu+627355,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Koonthankulam Bird Sanctuary </h3>  It is just a short distance away from Tirunelveli having more than 43 species of resident and migratory water birds visit here every year and more than 100,000 migratory birds start coming by December and fly away to their northern homes by June or July after they lay and hatch eggs and the young ones mature enough to fly with the older ones.";
+  } else if(id == 5) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Thenmalai,+Tamil+Nadu+627757,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Thenmalai </h3> Located 45 kms from Courtallam, Thenmala is a small village at the foothills of Western Ghats and predominantly a forest area. The famous Shenduruney Wildlife Sanctuary forms the main attraction of Thenmala Ecotourism.";
+  } else if(id == 6) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Kanyakumari+Sunrise+View,+Kanyakumari,+Tamil+Nadu,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Kanyaakumari </h3>  Kanyakumari town has tourist attractions of its own, the district has many more, from centuries-old historic and religious  sites to scenic places.A unique feature of Kanyakumari district is its diversity of natural ecosystems, including beaches, mountain valleys, evergreen forests in the deep interior, rubber and clove plantations on the highlands located 84 kms from Tirunelveli";
+  } else if(id == 7) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Arulmigu+Sankaranarayanaswamy+Temple,+Sankarankovil+Tirunelveli,+Tamil+Nadu,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Sankaranarayanaswamy Temple </h3>Sankaranainar Kovil, also known as the Sankara Narayanan Temple and was built in the 11th century by the Pandya king, Ukirapandiar. This temple also gives the town its name, Sankarankoil. In this temple you can see an unusual sight of Lord Shiva and Lord Vishnu placed together in the same sanctum sanctorum. Shiva lingams usually represent one particular natural element. In this holy place the Shivalingam, Sri Sankaralingaswami personifies the earth.The Sankarankoil temple’s architecture has been designed brilliantly so that in March and September, the rays of the sun fall on the icon of Lord Sankaralingam for three days from the 21st of each month.";
+  } else if(id == 8) {
+    $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
+    &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India&destination=Tirparappu+Water+Falls,+Kanyakumari+Tamil+Nadu,+India&zoom=9');
+    document.getElementById("tdesc").innerHTML = " <h3> Tirparappu Falls </h3> The Kodayar River makes its descent at Thiruparappu. The water fall at this place is about 13 kilometres from Pechiparai Dam. The river bed is rocky and about 300 feet in length. The water falls from a height of nearly 50 feet and the water flows for about seven months per year. On either side of the river, on the left bank of the river in between the waterfalls and the weir, there is a temple dedicated to Shiva enclosed by strong fortification. The District Administration has recently constructed a swimming pool which is very popular among the children. Other more serene waterfalls in this area are Vattaparai Falls and Kalikesam falls.";
   } else {
     $("#tmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
-    &q=Tirunelveli,+Tamil+Nadu,+India');
-    document.getElementById("tdesc").innerHTML = " <h3> Tourist Attractions in and around Tirunelveli </h3>";
+    &q=Tirunelveli+Tamil+Nadu,+India&zoom=12');
+    document.getElementById("tdesc").innerHTML = " <h3> Tourist Attractions in and around Tirunelveli </h3> <br /> \
+     Tirunelveli, located on the banks of the river Tamiraparani and surrounded by the western ghats, has a rich history and thus contains a several historical and geographical interesting locations worth a visit. Above you can find a collection of such locations where you can visit during your travel to Tirunelveli. Just click on the locations to get more inforamtion about that tourist attraction and also get directions and other useful tips and links.";
   }
 }
 
@@ -157,14 +194,14 @@ function loadgmap(id) {
   if(id == 2)
     $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
     &origin=Tirunelveli+Old+Bus+Stand+Tirunelveli+Tamil Nadu+India \
-    &destination=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+    &destination=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India&zoom=12');
   else if(id == 1)
     $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
     &origin=Tirunelveli+New+Bus+Stand+Tirunelveli+Tamil Nadu+India \
-    &destination=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+    &destination=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India&zoom=12');
   else
     $("#gmap").attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCYwmQUnZRSsXfwJXAeNKo6h7AjtvVlZmg \
-    &q=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India');
+    &q=VMS+Kalyana+Mandapam+Tirunelveli+Tamil Nadu+India&zoom=12');
 }
 
 function resizeMe() {
