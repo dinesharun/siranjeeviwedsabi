@@ -21,12 +21,12 @@ function onLoadActions() {
                 'static/imgs/albums/te07.jpg',
                 'static/imgs/albums/te08.jpg',
                 'static/imgs/albums/te09.jpg',
-                'static/imgs/albums/finvi1.jpg',
-                'static/imgs/albums/finvi2.jpg',
-                'static/imgs/albums/finvi3.jpg',
-                'static/imgs/albums/finvi4.jpg',
-                'static/imgs/albums/finvif.jpg',
-                'static/imgs/albums/finvib.jpg');
+                'static/imgs/albums/tfinvi1.jpg',
+                'static/imgs/albums/tfinvi2.jpg',
+                'static/imgs/albums/tfinvi3.jpg',
+                'static/imgs/albums/tfinvi4.jpg',
+                'static/imgs/albums/tfinvif.jpg',
+                'static/imgs/albums/tfinvib.jpg');
   fillGuestBook();
   startCountDown();
   jQuery('.scrollbar-chrome').scrollbar();
