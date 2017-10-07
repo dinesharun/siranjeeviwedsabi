@@ -7518,19 +7518,21 @@ console.log('ok');
         typeof fu == 'function' ? fu(items) : window[fu](items);
       }
     
-      // use internal viewer
-      if( !G.VOM.viewerDisplayed ) {
-        // build viewer and display
-        OpenInternalViewer();
-      }
-      else {
-        // viewer already displayed -> display in current one
-        G.VOM.$imgC.css({ opacity:0 }).attr('src','');
-        G.VOM.ImageLoader.loadImage(VieweImgSizeRetrieved, G.VOM.NGY2Item(0));
-        G.VOM.$imgC.children().eq(0).attr('src',G.emptyGif).attr('src', G.VOM.NGY2Item(0).responsiveURL());
-        // ViewerDisplayDominantColors(G.VOM.NGY2Item(0), G.VOM.$imgC.children());
-        DisplayInternalViewer(0, '');
-      }
+      if(0) {
+	      // use internal viewer
+	      if( !G.VOM.viewerDisplayed ) {
+		// build viewer and display
+		OpenInternalViewer();
+	      }
+	      else {
+		// viewer already displayed -> display in current one
+		G.VOM.$imgC.css({ opacity:0 }).attr('src','');
+		G.VOM.ImageLoader.loadImage(VieweImgSizeRetrieved, G.VOM.NGY2Item(0));
+		G.VOM.$imgC.children().eq(0).attr('src',G.emptyGif).attr('src', G.VOM.NGY2Item(0).responsiveURL());
+		// ViewerDisplayDominantColors(G.VOM.NGY2Item(0), G.VOM.$imgC.children());
+		DisplayInternalViewer(0, '');
+	      }
+	}
     }
     
     function ViewerDisplayDominantColors(item, $img) {

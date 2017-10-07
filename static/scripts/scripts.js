@@ -345,3 +345,17 @@ function startCountDown() {
   }
 }, 1000);
 }
+
+function viewWithFancybox( items ) {
+  var lstItems=[];
+  
+  for(var i=0;  i<items.length; i++) {
+    lstItems.push( {src:items[i].responsiveURL()} );
+  }
+  $.fancybox.open(lstItems);
+}
+
+function closeIntViewer() {
+  setTimeout(function() { $("#nanogallery2").nanogallery2('closeViewer'); }, 900);
+}
+
