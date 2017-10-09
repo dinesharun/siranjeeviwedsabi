@@ -80,6 +80,12 @@ and (orientation : portrait) {.mobilewarn {display: block; } }
 .inviLink:hover {cursor: pointer; font-weight: bold; font-size: 105%;}
 .btl {position: absolute; left: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
 .btr {position: absolute; right: -18%; bottom: -3%; height: 210%; width: 27%; opacity: 0.27;}
+@keyframes vidintro { from {top: 150%; } to {top: 18%; } }
+.vidintro { animation-name: vidintro; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes videxit { from {top: 18%; } to {top: 150%; } }
+.videxit { animation-name: videxit; animation-duration: 2s; animation-fill-mode: forwards;}
+.video{position: absolute; left: 9%; top: 150%; height: 72%; width: 81%; border: 2px double black; border-radius: 12% 12% 0px 0px; text-align: center; font-size: 180%; font-weight: bold; text-shadow: 1px 1px 1px #000000, -1px -1px 1px white; overflow: hidden; overflow: hidden; opacity: 0.72; z-index: 10;}
+.vid {margin: 6%; width: 81%; height: 78%; border: 1px solid black;}
 @keyframes gbintro { from {top: 150%; } to {top: 30%; } }
 .gbintro { animation-name: gbintro; animation-duration: 2s; animation-fill-mode: forwards;}
 @keyframes gbexit { from {top: 30%; } to {top: 150%; } }
