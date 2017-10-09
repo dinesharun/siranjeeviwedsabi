@@ -86,6 +86,11 @@ function navTo(entry, pgid) {
             $("#infol").removeClass('infolintro');
             $("#infol").addClass('infolexit');
             break;
+            
+          case 5:
+            $("#video").removeClass('vidintro');
+            $("#video").addClass('videxit');
+            break;
    
           default:
             break;
@@ -134,6 +139,11 @@ function navTo(entry, pgid) {
           $("#infol").removeClass('infolexit');
           $("#infol").addClass('infolintro');
           break;
+          
+        case 5:
+            $("#video").removeClass('videxit');
+            $("#video").addClass('vidintro');
+            break;
    
         default:
           break;
